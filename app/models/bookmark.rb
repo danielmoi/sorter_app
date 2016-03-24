@@ -2,12 +2,13 @@
 #
 # Table name: bookmarks
 #
-#  id          :integer          not null, primary key
-#  url         :text
-#  title       :text
-#  description :text
-#  created_at  :datetime
-#  updated_at  :datetime
+#  id           :integer          not null, primary key
+#  url          :text
+#  title        :text
+#  description  :text
+#  created_at   :datetime
+#  updated_at   :datetime
+#  is_favourite :boolean          default("false")
 #
 
 class Bookmark < ActiveRecord::Base
