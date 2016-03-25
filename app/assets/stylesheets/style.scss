@@ -1,23 +1,18 @@
 // 1. GLOBAL
 $text: rgb(44, 62, 80);
-$primary: rgb(44, 62, 80);
-
-
-///////////////////////////////////////////////////////////////////////////////
-
+$primary: rgb(44, 62, 80); ///////////////////////////////////////////////////////////////////////////////
 // 2. GENERIC
 // ( resets )
 // http://jaydenseric.com/blog/forget-normalize-or-resets-lay-your-own-css-foundation
-
 html {
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 body {
-    margin: 0;
-    font: 16px/1 sans-serif;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+  margin: 0;
+  font: 16px/1 sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 h1,
 h2,
@@ -28,52 +23,51 @@ blockquote,
 figure,
 ol,
 ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 main,
 li {
-    display: block;
+  display: block;
 }
 h1,
 h2,
 h3,
 h4 {
-    font-size: inherit;
+  font-size: inherit;
 }
 strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 a,
 button {
-    color: inherit;
-    transition: .3s;
+  color: inherit;
+  transition: 0.3s;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 button {
-    overflow: visible;
-    border: 0;
-    font: inherit;
-    -webkit-font-smoothing: inherit;
-    letter-spacing: inherit;
-    background: none;
-    cursor: pointer;
+  overflow: visible;
+  border: 0;
+  font: inherit;
+  -webkit-font-smoothing: inherit;
+  letter-spacing: inherit;
+  background: none;
+  cursor: pointer;
 }
-::-moz-focus-inner {
-    padding: 0;
-    border: 0;
+ ::-moz-focus-inner {
+  padding: 0;
+  border: 0;
 }
-:focus {
-    outline: 0;
+ :focus {
+  outline: 0;
 }
 img {
-    max-width: 100%;
-    height: auto;
-    border: 0;
+  max-width: 100%;
+  height: auto;
+  border: 0;
 }
-
 // 3. TYPOGRAPHY
 * {
   font-family: Helvetica, sans-serif;
@@ -83,15 +77,11 @@ h1 {
   font-size: 3em;
   padding: 5px 0;
 }
-
 // 4. BASE ELEMENTS
-
 * {
   box-sizing: border-box;
 }
-
 // 5. SECTIONS
-
 // 5.1 NAV
 .header {
   text-align: center;
@@ -99,11 +89,9 @@ h1 {
   max-width: 600px;
   margin: 0 auto;
 }
-
 .nav {
   padding: 20px 0;
 }
-
 .header__user {
   text-align: right;
 }
@@ -112,11 +100,7 @@ h1 {
   max-width: 600px;
   margin: 0 auto;
 }
-
-.footer {
-
-}
-
+.footer {}
 // 6. MODULES
 .btn {
   font-size: 1em;
@@ -129,4 +113,31 @@ h1 {
 }
 .btn:hover {
   text-decoration: none;
+}
+.form {
+  max-width: 80%;
+  margin: 2em auto;
+  padding: 2em;
+  border: 1px solid $primary;
+  border-radius: 1em;
+}
+fieldset {
+  border: none;
+  padding: 10px 0;
+}
+.input {
+  display: inline-block;
+  width: 50%;
+  font-size: 1em;
+  padding: 0.5em;
+  border: 1px solid $primary;
+}
+.label {
+  display: inline-block;
+  width: 25%;
+  text-align: right;
+}
+// 6. HELPERS
+.text-center {
+  text-align: center;
 }

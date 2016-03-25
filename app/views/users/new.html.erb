@@ -1,25 +1,25 @@
 <h2>Sign up</h2>
 <p>Find me in app/views/users/new.html.erb</p>
 
-<%= form_for @user do |f| %>
+<%= form_for @user, :html => {:class => 'form'} do |f| %>
 
 <fieldset>
   <%= f.label :email, :class => 'label' %>
-  <%= f.email_field :email, :required => true %>
+  <%= f.email_field :email, :required => true, :class => 'input' %>
 </fieldset>
 
 <fieldset>
-  <%= f.label :password %>
-  <%= f.password_field :password, :required => true %>
+  <%= f.label :password, :class => 'label' %>
+  <%= f.password_field :password, :required => true, :class => 'input' %>
 </fieldset>
 
 <fieldset>
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation, :required => true %>
+  <%= f.label :password_confirmation, :class => 'label' %>
+  <%= f.password_field :password_confirmation, :required => true, :class => 'input' %>
 </fieldset>
 
-<fieldset>
-  <%= f.submit "Sign up" %>
+<fieldset class="text-center">
+  <%= f.submit "Sign up", :class => 'btn' %>
 </fieldset>
 
 <% end %>
