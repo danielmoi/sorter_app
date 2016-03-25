@@ -81,6 +81,7 @@ img {
 }
 h1 {
   font-size: 3em;
+  padding: 5px 0;
 }
 
 // 4. BASE ELEMENTS
@@ -95,13 +96,17 @@ h1 {
 .header {
   text-align: center;
   padding: 20px 0;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .nav {
   padding: 20px 0;
 }
 
-
+.header__user {
+  text-align: right;
+}
 // 5.2 MAIN
 .main {
   max-width: 600px;
