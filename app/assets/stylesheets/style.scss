@@ -140,6 +140,9 @@ fieldset {
   border: none;
   padding: 10px 0;
 }
+.field_with_errors {
+  display: inline;
+}
 .input {
   display: inline-block;
   width: 50%;
