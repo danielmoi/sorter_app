@@ -1,2 +1,45 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<div class="main__heading">
+  <h2>Edit profile</h2>
+</div>
+<div class="main__subheading">
+  <p>Find me in app/views/users/edit.html.erb</p>
+</div>
+
+<!--  Display error from login fail (redirect from login `else`)-->
+<% if flash[:error].present? %>
+<h3 class="login__error-heading">
+  <%= flash[:error] %>
+</h3>
+<% end %>
+
+
+<%= form_for @user, :html => {:class => 'form'} do |f| %>
+
+<% if @user.errors.any? %>
+  <ol>
+    <% @user.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ol>
+<% end %>
+
+<fieldset>
+  <%= f.label :email, :class => 'label' %>
+  <%= f.email_field :email, :required => true, :class => 'input' %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :password, :class => 'label' %>
+  <%= f.password_field :password, :required => true, :class => 'input' %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :password_confirmation, "Confirm", :class => 'label' %>
+  <%= f.password_field :password_confirmation, :required => true, :class => 'input' %>
+</fieldset>
+
+<fieldset class="text-center">
+  <%= f.submit "Save changes", :class => 'btn' %>
+</fieldset>
+
+<% end %>

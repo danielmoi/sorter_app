@@ -15,11 +15,12 @@ Rails.application.routes.draw do
 
   root :to => 'pages#home'
 
-  ## User routes
+  ##### User routes #####
   resources :users, :only => [:new, :create, :index, :update]
   get '/signup' => 'users#new'
+  get '/users/edit' => 'users#edit'
 
-  ## Session routes
+  ##### Session routes #####
   # Receive request for login view
   get '/login' => 'session#new'
 

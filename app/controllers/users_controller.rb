@@ -14,7 +14,22 @@ class UsersController < ApplicationController
       render :new
     end
   end
-  
+
+  # render view for edit profile
+  def edit
+    @user = @current_user
+  end
+
+  # handle edit form submission
+  def update
+    @user = @current_user
+    if @user.update user_params
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
 
   # can't visit these URLs
   private
