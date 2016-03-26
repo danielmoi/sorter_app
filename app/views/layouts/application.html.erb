@@ -9,22 +9,34 @@
   <body>
     <header class="header">
       <div class="header__user">
-        Logged in as:
+
+        <!--  Conditional links -->
+        <% if @current_user.present? %>
+        Logged in as: <%= @current_user.email %>
+
+        <% else %>
+          <%= link_to 'Sign up', signup_path %>
+          <%= link_to 'Log in', login_path %>
+        <% end %>
+        <!--  End conditional links -->
+
       </div>
       <h1>Sorter App 0.1</h1>
 
       <nav class="nav">
         <ul>
-          <li><%= link_to "Home", root_path %></li>
-        </ul>
-      </nav>
-    </header>
+        <li><%= link_to "Home", root_path %></li>
 
-    <main class="main">
 
-      <%= yield %>
+      </ul>
+    </nav>
+  </header>
 
-    </main>
+  <main class="main">
 
-  </body>
+    <%= yield %>
+
+  </main>
+
+</body>
 </html>
