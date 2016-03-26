@@ -151,7 +151,9 @@ p {
 .bookmark-link {
   font-style: italic;
 }
-.bookmark-created {
+.bookmark-created,
+.bookmark-fav,
+.bookmark-read {
   font-size: 0.8em;
 }
 // OTHER
