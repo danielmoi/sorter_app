@@ -13,12 +13,21 @@
 
 Rails.application.routes.draw do
 
+  get 'bookmarks/index'
+
+  get 'bookmarks/edit'
+
+  get 'bookmarks/show'
+
+  get 'bookmarks/delete'
+
   root :to => 'pages#home'
 
   ##### User routes #####
   resources :users, :only => [:new, :create, :index, :update]
   get '/signup' => 'users#new'
   get '/users/edit' => 'users#edit'
+  # get '/bookmarks' => 'users#index'
 
   ##### Session routes #####
   # Receive request for login view
@@ -30,6 +39,7 @@ Rails.application.routes.draw do
   # Receive request to logout
   delete '/login' => 'session#destroy'
 
-
+  ##### Bookmarks routes #####
+  resources :bookmarks
 
 end

@@ -1,0 +1,21 @@
+<div class="main__heading">
+  <h2>My Bookmarks</h2>
+</div>
+
+<div class="main__subheading">
+  <p>Find me in app/views/bookmarks/index.html.erb</p>
+</div>
+
+<div class="bookmarks-container">
+
+  <% @current_user.bookmarks.each do |b| %>
+
+  <div class="bookmark-each">
+    <ul>
+      <li><%= b.title %></li>
+      <li><%= link_to b.url, b.url, :class => 'bookmark-link' %></li>
+      <li class="bookmark-created"><%= b.created_at %></li>
+    </ul>
+  </div>
+  <% end %>
+</div>

@@ -9,22 +9,13 @@
 <section class="main-section">
 
   <% if @current_user.present? %>
-  <p>You are logged in as:
-    <%= @current_user.email %></p>
 
-  <h3>Your categories:</h3>
+  <p>You are logged in as: <%= @current_user.email %></p>
+  <div class="btn-container">
+    <%= link_to 'My Bookmarks', bookmarks_path, :class => 'btn' %>
+  </div>
 
-  <ul>
-    <% @current_user.categories.each do |c| %>
-    <li><%= c.name %></li>
-    <% end %>
-  </ul>
 
-  <h3>Your bookmarks:</h3>
-  <ul>
-    <% @current_user.bookmarks.each do |b| %>
-    <li><%= link_to b.url, b.url %></li>
-    <% end %></ul>
 
 <% else %>
   <div>

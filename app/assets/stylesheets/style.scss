@@ -140,6 +140,20 @@ p {
   margin: 2em 0;
 }
 
+// BOOKMARKS
+.bookmarks-container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.bookmark-each {
+  margin: 1em 0;
+}
+.bookmark-link {
+  font-style: italic;
+}
+.bookmark-created {
+  font-size: 0.8em;
+}
 // OTHER
 .login__error-heading {
   text-align: center;
@@ -158,6 +172,9 @@ p {
 }
 .btn:hover {
   text-decoration: none;
+}
+.btn-container {
+  margin: 1em 0;
 }
 .form {
   max-width: 80%;
