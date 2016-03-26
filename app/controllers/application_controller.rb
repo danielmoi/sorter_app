@@ -17,6 +17,6 @@ class ApplicationController < ActionController::Base
     @current_user = User.find_by :id => session[:user_id] if session[:user_id].present?
 
     # 2. clean up if the above didn't work
-    session[:user_id] = nil unless @current.user.present?
+    session[:user_id] = nil unless @current_user.present?
   end
 end
