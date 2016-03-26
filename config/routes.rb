@@ -13,14 +13,6 @@
 
 Rails.application.routes.draw do
 
-  get 'bookmarks/index'
-
-  get 'bookmarks/edit'
-
-  get 'bookmarks/show'
-
-  get 'bookmarks/delete'
-
   root :to => 'pages#home'
 
   ##### User routes #####

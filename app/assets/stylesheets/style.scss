@@ -142,7 +142,7 @@ p {
 
 // BOOKMARKS
 .bookmarks-container {
-  max-width: 80%;
+  // max-width: 80%;
   margin: 0 auto;
 }
 .bookmark-each {
@@ -176,7 +176,8 @@ p {
   text-decoration: none;
 }
 .btn-container {
-  margin: 1em 0;
+  margin: 2em 0;
+  text-align: center;
 }
 .form {
   max-width: 80%;

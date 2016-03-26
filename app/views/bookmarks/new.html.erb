@@ -1,0 +1,49 @@
+<div class="main__heading">
+  <h2>New Bookmark</h2>
+</div>
+
+<div class="main__subheading">
+  <p>Find me in app/views/bookmarks/new.html.erb</p>
+</div>
+
+<!--  TODO: Move this inside a partial -->
+<%= form_for @bookmark, :html => {:class => 'form'} do |f| %>
+
+<% if @bookmark.errors.any? %>
+  <ol>
+    <% @bookmark.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ol>
+<% end %>
+
+<fieldset>
+  <%= f.label :url, "URL: ", :class => 'label' %>
+  <%= f.url_field :url, :required => true, :class => 'input' %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :title, "Title: ", :class => 'label' %>
+  <%= f.text_field :title, :class => 'input' %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :description, "Description: ", :class => 'label' %>
+  <%= f.text_field :description, :class => 'input' %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :is_favourite, "Favourite?", :class => 'label' %>
+  <%= f.check_box :is_favourite, :class => 'checkbox' %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :is_unread, "Unread?", :class => 'label' %>
+  <%= f.check_box :is_unread, :class => 'checkbox' %>
+</fieldset>
+
+<fieldset class="btn-container">
+  <%= f.submit "Create Bookmark", :class => 'btn' %>
+</fieldset>
+
+<% end %>
