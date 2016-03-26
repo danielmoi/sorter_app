@@ -1,6 +1,7 @@
 // 1. GLOBAL
 $text: rgb(44, 62, 80);
-$primary: rgb(44, 62, 80); ///////////////////////////////////////////////////////////////////////////////
+$primary: rgb(44, 62, 80);
+$warning: rgb(231, 76, 60); ///////////////////////////////////////////////////////////////////////////////
 // 2. GENERIC
 // ( resets )
 // http://jaydenseric.com/blog/forget-normalize-or-resets-lay-your-own-css-foundation
@@ -82,6 +83,11 @@ h2 {
   font-size: 2em;
   padding: 5px 0;
 }
+
+h3 {
+  font-size: 1.5em;
+  padding: 5px 0;
+}
 p {
   font-size: 1em;
   padding: 5px 0;
@@ -114,6 +120,12 @@ p {
 }
 .main__subheading {
   text-align: center;
+}
+
+// OTHER
+.login__error-heading {
+  text-align: center;
+  color: $warning;
 }
 
 // 6. MODULES
