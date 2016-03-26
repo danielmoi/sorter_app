@@ -8,22 +8,29 @@
 
 <section class="main-section">
 
-<% if @current_user.present? %>
-<p>You are logged in as:
-  <%= @current_user.email %></p>
+  <% if @current_user.present? %>
+  <p>You are logged in as:
+    <%= @current_user.email %></p>
 
+  <h3>Your categories:</h3>
 
+  <ul>
+    <% @current_user.categories.each do |c| %>
+    <li><%= c.name %></li>
+    <% end %>
+  </ul>
 
-
-
-
-
+  <h3>Your bookmarks:</h3>
+  <ul>
+    <% @current_user.bookmarks.each do |b| %>
+    <li><%= link_to b.url, b.url %></li>
+    <% end %></ul>
 
 <% else %>
   <div>
     <%= link_to 'Sign up', signup_path, :class => 'btn' %>
     <%= link_to 'Log in', login_path, :class => 'btn' %>
   </div>
-<% end %>
+  <% end %>
 
 </section>
