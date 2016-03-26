@@ -1,4 +1,7 @@
 class BookmarksController < ApplicationController
+  def index
+  end
+
   def new
     @bookmark = Bookmark.new
   end
@@ -10,6 +13,16 @@ class BookmarksController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    @bookmark = Bookmark.find params[:id]
+  end
+
+  def update
+    bookmark = Bookmark.find params[:id]
+    bookmark.update bookmark_params
+    redirect_to bookmarks_path
   end
 
   # can't visit these URLs
