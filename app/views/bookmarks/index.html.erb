@@ -23,6 +23,8 @@
       <li class="bookmark-fav">Favourite? <%= b.is_favourite %></li>
       <li class="bookmark-unread">Unread? <%= b.is_unread %></li>
       <li><%= link_to "Edit", edit_bookmark_path(b.id) %></li>
+      <li><%= link_to "Delete", bookmark_path(b.id), :method => 'delete' %></li>
+
     </ul>
   </div>
   <% end %>
