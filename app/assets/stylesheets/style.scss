@@ -76,7 +76,7 @@ img {
 }
 h1 {
   font-size: 3em;
-  padding: 5px 0;
+  padding: 10px 0;
 }
 
 h2 {
@@ -100,15 +100,29 @@ p {
 // 5.1 NAV
 .header {
   text-align: center;
-  padding: 20px 0;
+  padding: 0 0 20px 0;
   max-width: 600px;
   margin: 0 auto;
 }
 .nav {
   padding: 20px 0;
 }
+
+.nav-list {
+  padding: 10px 0;
+  list-style: none;
+}
+.nav-list__item {
+  padding: 1em;
+  display: inline;
+}
+.nav-list__item {
+  padding: 1em 0.5em;
+}
+
 .header__user {
   text-align: right;
+  font-size: 0.9em;
 }
 // 5.2 MAIN
 .main {

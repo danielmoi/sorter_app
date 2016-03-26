@@ -20,11 +20,15 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
 
   ## Session routes
-  # Display login view
+  # Receive request for login view
   get '/login' => 'session#new'
 
-  # Receive login submit
+  # Receive request from login form submit
   post '/login' => 'session#create'
+
+  # Receive request to logout
+  delete '/login' => 'session#destroy'
+
 
 
 end

@@ -10,33 +10,37 @@
     <header class="header">
       <div class="header__user">
 
-        <!--  Conditional links -->
-        <% if @current_user.present? %>
-        Logged in as: <%= @current_user.email %>
+        <ul class="nav-list nav-list--user-options">
+          <!--  Conditional links -->
+          <% if @current_user.present? %>
+          <li class="nav-list__item nav-list__item--header-users">Logged in as: <%= @current_user.email %></li>
+
+          <li class="nav-list__item nav-list__item--header-users"><%= link_to 'Log out', login_path, :method => :delete %></li>
 
         <% else %>
-          <%= link_to 'Sign up', signup_path %>
-          <%= link_to 'Log in', login_path %>
-        <% end %>
-        <!--  End conditional links -->
+          <li class="nav-list__item nav-list__item--header-users"><%= link_to 'Sign up', signup_path %></li>
+          <li class="nav-list__item nav-list__item--header-users"><%= link_to 'Log in', login_path %></li>
+          <% end %>
+          <!--  End conditional links -->
+        </ul>
 
       </div>
+
       <h1>Sorter App 0.1</h1>
 
       <nav class="nav">
         <ul>
-        <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Home", root_path %></li>
 
+        </ul>
+      </nav>
+    </header>
 
-      </ul>
-    </nav>
-  </header>
+    <main class="main">
 
-  <main class="main">
+      <%= yield %>
 
-    <%= yield %>
+    </main>
 
-  </main>
-
-</body>
+  </body>
 </html>
