@@ -9,6 +9,7 @@
 #  created_at   :datetime
 #  updated_at   :datetime
 #  is_favourite :boolean          default("false")
+#  is_unread    :boolean          default("true")
 #
 
 class Bookmark < ActiveRecord::Base

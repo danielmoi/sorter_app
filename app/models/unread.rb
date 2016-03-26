@@ -2,12 +2,12 @@
 #
 # Table name: unreads
 #
-#  id           :integer          not null, primary key
-#  user_id      :integer
-#  bookmark_id  :integer
-#  is_favourite :boolean
-#  created_at   :datetime
-#  updated_at   :datetime
+#  id          :integer          not null, primary key
+#  user_id     :integer
+#  bookmark_id :integer
+#  is_unread   :boolean
+#  created_at  :datetime
+#  updated_at  :datetime
 #
 
 class Unread < ActiveRecord::Base
