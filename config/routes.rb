@@ -13,6 +13,14 @@
 
 Rails.application.routes.draw do
 
+  get 'categories/new'
+
+  get 'categories/index'
+
+  get 'categories/edit'
+
+  get 'categories/delete'
+
   root :to => 'pages#home'
 
   ##### User routes #####

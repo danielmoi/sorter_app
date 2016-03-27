@@ -33,6 +33,12 @@
   <%= f.check_box :is_unread, :class => 'checkbox' %>
 </fieldset>
 
+<fieldset>
+  <%= f.label :category_id %>
+  <%= f.select :category_id, Category.all.select{ |m| m.user_id == 9}.collect { |e| [e.name, e.id] } %>
+
+</fieldset>
+
 <fieldset class="btn-container">
   <%= f.submit :class => 'btn' %>
 </fieldset>

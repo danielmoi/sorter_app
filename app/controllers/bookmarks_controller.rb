@@ -1,5 +1,6 @@
 class BookmarksController < ApplicationController
   def index
+    @user = @current_user
   end
 
   def new
@@ -7,7 +8,7 @@ class BookmarksController < ApplicationController
   end
 
   def create
-    @bookmark = Bookmark.new bookmark_params
+    @bookmark = Bookmark.new bookmark_params, user_id: @current_user.id
     if @bookmark.save
       redirect_to bookmarks_path
     else
@@ -34,7 +35,7 @@ class BookmarksController < ApplicationController
   # can't visit these URLs
   private
   def bookmark_params
-    params.require(:bookmark).permit(:url, :title, :description, :is_favourite, :is_unread)
+    params.require(:bookmark).permit(:url, :title, :description, :is_favourite, :is_unread, :category_id)
   end
 
 end
