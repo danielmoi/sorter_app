@@ -35,8 +35,7 @@
 
 <fieldset>
   <%= f.label :category_id %>
-  <%= f.select :category_id, Category.all.select{ |m| m.user_id == 9}.collect { |e| [e.name, e.id] } %>
-
+  <%= f.select :category_id, @current_user.categories.collect { |category| [category.name, category.id] } %>
 </fieldset>
 
 <fieldset class="btn-container">
