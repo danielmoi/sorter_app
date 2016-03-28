@@ -13,13 +13,18 @@
 
 Rails.application.routes.draw do
 
+  ##### Static pages routes #####
   root :to => 'pages#home'
+  get '/about' => 'pages#about'
+  get '/help' => 'pages#help'
 
   ##### User routes #####
   resources :users, :only => [:new, :create, :index, :update]
   get '/signup' => 'users#new'
   get '/users/edit' => 'users#edit'
   # get '/bookmarks' => 'users#index'
+
+
 
   ##### Session routes #####
   # Receive request for login view
@@ -31,8 +36,12 @@ Rails.application.routes.draw do
   # Receive request to logout
   delete '/login' => 'session#destroy'
 
+
+
   ##### Bookmarks routes #####
   resources :bookmarks
+
+
 
   ##### Categories routes #####
   resources :categories
