@@ -3,6 +3,13 @@ class CategoriesController < ApplicationController
   end
 
   def index
+    @user = @current_user
+  end
+
+  def show
+    @user = @current_user
+    @category = Category.find params[:id]
+
   end
 
   def edit
@@ -10,4 +17,6 @@ class CategoriesController < ApplicationController
 
   def delete
   end
+
+
 end
