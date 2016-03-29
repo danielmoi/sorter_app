@@ -159,12 +159,12 @@ p {
 
 .bookmark__details {
   display: inline-block;
-  width: 60%;
+  width: 70%;
 }
 
 .bookmark__controls {
   display: inline-block;
-  width: 39%;
+  width: 29%;
   position: absolute;
   text-align: right;
 }
@@ -241,4 +241,11 @@ fieldset {
 // 6. HELPERS
 .text-center {
   text-align: center;
+}
+
+.truncate {
+  // width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
