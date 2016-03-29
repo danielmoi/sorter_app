@@ -5,6 +5,10 @@
 <div class="main__subheading">
 </div>
 
+<div class="btn-container">
+  <%= link_to 'New bookmark', new_bookmark_path, :class => 'btn' %>
+</div>
+
 <% @user.categories.each do |category| %>
 
   <h3><%= category.name %></h3>

@@ -158,7 +158,8 @@ p {
   // max-width: 80%;
   margin: 0 auto;
 }
-.bookmark {
+.bookmark-each,
+.user-each {
   margin: 1em 0;
   padding: 1em;
   border: 1px solid $primary;

@@ -1,0 +1,33 @@
+<div class="main__heading">
+  <h2>All users</h2>
+</div>
+
+  <% User.all.each do |user| %>
+  <div class="user-each">
+
+  <p>
+    <b>Name: </b>
+    <% if user.name %>
+      <%= user.name %>
+    <% else %>
+      Not provided
+    <% end %>
+  </p>
+
+  <p>
+    <b>Email: </b>
+    <%= user.email %>
+  </p>
+
+  <p>
+    <b>All bookmarks</b>
+  </p>
+
+  <p>
+    <b>By categories: </b>
+    <% user.categories.each do |category| %>
+      <%= link_to category.name, category_path(category.id) %>
+    <% end %></p>
+
+  </div>
+  <% end %>
