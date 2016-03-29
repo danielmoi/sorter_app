@@ -18,8 +18,8 @@ class BookmarksController < ApplicationController
     title = doc.css('title').text
     @bookmark.title = title
 
-    description = doc.css('meta[name=description]')[0]['content']
-    @bookmark.description = description if description.any?
+    description = doc.css('meta[name=description]')[0]['content'] if doc.css('meta[name=description]').any?
+    @bookmark.description = description unless description.nil?
 
     if @bookmark.save
       redirect_to bookmarks_path
