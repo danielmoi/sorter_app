@@ -1,0 +1,21 @@
+<li>
+  <div class="bookmark">
+<div class="bookmark__details">
+  <h4><%= bookmark.title %></h4>
+  <p><%= link_to bookmark.url, bookmark.url, :class => 'bookmark-link' %></p>
+  <p><%= bookmark.description %></p>
+  <p class="bookmark-created"><%= bookmark.created_at %></p>
+  <p class="bookmark-fav">Favourite? <%= bookmark.is_favourite %></p>
+  <p class="bookmark-read">Read? <%= bookmark.is_read %></p>
+</div>
+
+
+<div class="bookmark__controls">
+  <%= link_to "", edit_bookmark_path(bookmark.id), :class => 'bookmark__button fa fa-pencil' %>
+  <%= link_to "", bookmark_path(bookmark.id), :method => 'delete', :class => 'bookmark__button fa fa-trash' %>
+
+</div>
+
+</div>
+
+  </li>

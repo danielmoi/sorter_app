@@ -12,7 +12,9 @@
 
     <ul>
       <% category.bookmarks.each do |bookmark| %>
-        <li><%= bookmark.url if bookmark.is_read == false %></li>
+        <% if bookmark.is_read == false %>
+        <%= render :partial => 'magic', locals: { :bookmark => bookmark } %>
+        <% end %>
       <% end %>
   </ul>
 <% end %>

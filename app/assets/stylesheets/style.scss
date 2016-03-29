@@ -131,6 +131,7 @@ p {
 .main {
   max-width: 600px;
   margin: 0 auto;
+  padding: 1em;
 }
 .main__heading {
   text-align: center;
@@ -148,8 +149,37 @@ p {
   // max-width: 80%;
   margin: 0 auto;
 }
-.bookmark-each {
+.bookmark {
   margin: 1em 0;
+  padding: 1em;
+  border: 1px solid $primary;
+  border-radius: 10px;
+  position: relative;;
+}
+
+.bookmark__details {
+  display: inline-block;
+  width: 60%;
+}
+
+.bookmark__controls {
+  display: inline-block;
+  width: 39%;
+  position: absolute;
+  text-align: right;
+}
+.bookmark__button {
+  display: inline;
+  margin-right: 10px;
+  border: 1px solid $primary;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  &.fa {
+    line-height: 40px;
+    font-size: 1.3em;
+    text-align: center;
+  }
 }
 .bookmark-link {
   font-style: italic;

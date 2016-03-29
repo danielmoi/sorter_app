@@ -12,20 +12,11 @@
 
 <div class="bookmarks-container">
 
-  <% @user.bookmarks.each do |b| %>
+  <% @user.bookmarks.each do |bookmark| %>
 
-  <div class="bookmark-each">
     <ul>
-      <li><%= b.title %></li>
-      <li><%= link_to b.url, b.url, :class => 'bookmark-link' %></li>
-      <li><%= b.description %></li>
-      <li class="bookmark-created"><%= b.created_at %></li>
-      <li class="bookmark-fav">Favourite? <%= b.is_favourite %></li>
-      <li class="bookmark-read">Read? <%= b.is_read %></li>
-      <li><%= link_to "Edit", edit_bookmark_path(b.id) %></li>
-      <li><%= link_to "Delete", bookmark_path(b.id), :method => 'delete' %></li>
+    <%= render :partial => 'magic', locals: { :bookmark => bookmark } %>
 
     </ul>
-  </div>
   <% end %>
 </div>
