@@ -24,6 +24,11 @@
 </fieldset>
 
 <fieldset>
+  <%= f.label :notes, "Notes: ", :class => 'label' %>
+  <%= f.text_area :notes, :class => 'input' %>
+</fieldset>
+
+<fieldset>
   <%= f.label :is_favourite, "Favourite?", :class => 'label' %>
   <%= f.check_box :is_favourite, :class => 'checkbox' %>
 </fieldset>
@@ -34,10 +39,10 @@
 </fieldset>
 
 <fieldset>
-  <p>Category</p>
+  <%= f.label :category_id, :class => 'label' %>
 
   <%= f.collection_check_boxes :category_ids, @current_user.categories, :id, :name do |b| %>
-    <%= b.check_box %>
+    <%= b.check_box( :class => 'checkbox' ) %>
     <%= b.label %>
   <% end %>
 
