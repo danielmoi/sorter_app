@@ -10,8 +10,17 @@ class BookmarksController < ApplicationController
   end
 
   def create
+    require 'open-uri'
     @bookmark = Bookmark.new bookmark_params
     @bookmark.user_id = @current_user.id
+
+    doc = Nokogiri::HTML(open(@bookmark.url))
+    title = doc.css('title').text
+    @bookmark.title = title
+
+    description = doc.css('meta[name=description]')[0]['content']
+    @bookmark.description = description if description.any?
+
     if @bookmark.save
       redirect_to bookmarks_path
     else
