@@ -11,7 +11,7 @@ html {
 }
 body {
   margin: 0;
-  font: 16px/1 sans-serif;
+  font: 14px/1 sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -75,8 +75,11 @@ img {
   color: $text;
 }
 h1 {
-  font-size: 3em;
+  font-size: 2em;
   padding: 10px 0;
+  @media screen and (min-width: 600px) {
+    font-size: 3em;
+  }
 }
 
 h2 {
