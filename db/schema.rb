@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160329032829) do
+ActiveRecord::Schema.define(version: 20160329091609) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20160329032829) do
     t.boolean  "is_unread",    default: true
     t.integer  "user_id"
     t.boolean  "is_read",      default: false
+    t.text     "notes"
   end
 
   create_table "bookmarks_categories", id: false, force: :cascade do |t|

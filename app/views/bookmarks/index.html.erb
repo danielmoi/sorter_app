@@ -1,21 +1,17 @@
 <div class="main__heading">
-  <h2>My Bookmarks</h2>
+  <h2>Reading List</h2>
 </div>
 
 <div class="main__subheading">
 </div>
 
-<div class="btn-container">
-  <%= link_to 'New bookmark', new_bookmark_path, :class => 'btn' %>
-</div>
+<% @user.categories.each do |category| %>
 
-<div class="bookmarks-container">
-
-  <% @user.bookmarks.each do |bookmark| %>
+  <h3><%= category.name %></h3>
 
     <ul>
-    <%= render :partial => 'magic', locals: { :bookmark => bookmark } %>
-
-    </ul>
-  <% end %>
-</div>
+      <% category.bookmarks.each do |bookmark| %>
+        <%= render :partial => 'magic', locals: { :bookmark => bookmark } %>
+      <% end %>
+  </ul>
+<% end %>

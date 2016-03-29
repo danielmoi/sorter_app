@@ -12,6 +12,7 @@
 #  is_unread    :boolean          default("true")
 #  user_id      :integer
 #  is_read      :boolean          default("false")
+#  notes        :text
 #
 
 class Bookmark < ActiveRecord::Base
