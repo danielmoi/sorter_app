@@ -87,8 +87,11 @@ h1 {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.6em;
   padding: 5px 0;
+  @media screen and (min-width: 600px) {
+  font-size: 2em;
+  }
 }
 
 h3 {
@@ -107,12 +110,14 @@ p {
 // 5.1 NAV
 .header {
   text-align: center;
-  padding: 0 0 20px 0;
+  background: rgb(236, 240, 241);
+}
+.header-container {
   max-width: 600px;
   margin: 0 auto;
 }
 .nav {
-  padding: 20px 0;
+  padding: 0;
 }
 
 .nav-list {
