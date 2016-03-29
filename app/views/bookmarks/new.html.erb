@@ -5,4 +5,49 @@
 <div class="main__subheading">
   <p>Find me in app/views/bookmarks/new.html.erb</p>
 </div>
-<%= render :partial => 'form' %>
+
+<%= form_for @bookmark, :html => {:class => 'form'} do |f| %>
+
+<% if @bookmark.errors.any? %>
+<ol>
+  <% @bookmark.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+  <% end %>
+</ol>
+<% end %>
+
+<fieldset>
+  <%= f.label :url, "URL: ", :class => 'label' %>
+  <%= f.url_field :url, :required => true, :class => 'input' %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :notes, "Notes: ", :class => 'label' %>
+  <%= f.text_area :notes, :class => 'input' %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :is_favourite, "Favourite?", :class => 'label' %>
+  <%= f.check_box :is_favourite, :class => 'checkbox' %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :is_read, "Read?", :class => 'label' %>
+  <%= f.check_box :is_read, :class => 'checkbox' %>
+</fieldset>
+
+<fieldset>
+  <%= f.label :category_id, :class => 'label' %>
+
+  <%= f.collection_check_boxes :category_ids, @current_user.categories, :id, :name do |b| %>
+    <%= b.check_box( :class => 'checkbox' ) %>
+    <%= b.label %>
+  <% end %>
+
+</fieldset>
+
+<fieldset class="btn-container">
+  <%= f.submit :class => 'btn' %>
+</fieldset>
+
+<% end %>
