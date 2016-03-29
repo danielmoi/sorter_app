@@ -1,13 +1,13 @@
 $.ajax({
   type: "GET",
   contentType: "application/json; charset=utf-8",
-  url: 'graphs/data',
+  url: 'graphs/data2',
   dataType: 'json',
   success: function(data) {
     draw(data);
   },
   error: function(result) {
-    error();
+    error(result);
   }
 });
 
@@ -17,16 +17,17 @@ function draw(data) {
     barHeight = 20;
 
   var x = d3.scale.linear()
-    .range([0, width])
+    .range([0, width * 0.9]) // make it a bit less wide
     .domain([0, d3.max(data)]);
 
   var chart = d3.select("#graph")
     .attr("width", width)
     .attr("height", barHeight * data.length);
 
-  var bar = chart.selectAll("g")
+  var bar = chart.selectAll("g") // 'g' is a group element used as container
     .data(data)
-    .enter().append("g")
+    .enter()
+    .append("g")
     .attr("transform", function(d, i) {
       return "translate(0," + i * barHeight + ")";
     });
@@ -40,16 +41,16 @@ function draw(data) {
 
   bar.append("text")
     .attr("x", function(d) {
-      return x(d) - 10;
+      return x(d) + 10;
     })
     .attr("y", barHeight / 2)
     .attr("dy", ".35em")
-    .style("fill", "white")
+    .style("fill", "black")
     .text(function(d) {
       return d;
     });
 }
 
-function error() {
-  console.log("error");
+function error(result) {
+  console.log("error: " + result);
 }
