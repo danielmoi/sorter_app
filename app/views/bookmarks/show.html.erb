@@ -1,2 +1,51 @@
-<h1>Bookmarks#show</h1>
-<p>Find me in app/views/bookmarks/show.html.erb</p>
+<div class="main__heading">
+  <h2><%= @bookmark.title %></h2>
+</div>
+
+<h4>URL</h4>
+<p>
+  <%= link_to @bookmark.url, @bookmark.url, :class => 'bookmark-link' %>
+</p>
+
+<h4>Description</h4>
+<p><%= @bookmark.description %></p>
+
+<h4>Notes</h4>
+<p><%= @bookmark.notes %></p>
+
+<h4>Date created</h4>
+<p class="bookmark-created">
+  <i class="bookmark-timestamp"><%= @bookmark.created_at %></i>
+</p>
+
+<h4>Categories</h4>
+<ul>
+  <% @bookmark.categories.each do |category| %>
+    <li><%= link_to category.name, category_path(category.id) %></li>    
+  <% end %>
+</ul>
+
+<p>Favourite status:
+  <% if @bookmark.is_favourite == true %>
+  <i class="bookmark-fav bookmark-fav--is-fav fa fa-star"></i>
+  (favourited)
+<% else %>
+  <i class="bookmark-fav bookmark-fav--is-notfav fa fa-star-o"></i> (normal)
+  <% end %>
+</p>
+
+<p>Read status:
+  <% if @bookmark.is_read == true %>
+  <i class="bookmark-read bookmark-read--is-read fa fa-check-square-o"></i> (already read)
+<% else %>
+  <i class="bookmark-read bookmark-read--is-unread fa fa-square-o"></i> (still to be read)
+  <% end %>
+</p>
+
+<p>
+  <%= link_to " Edit", edit_bookmark_path(@bookmark.id), :class => 'bookmark-edit fa fa-pencil' %>
+</p>
+
+<p class="text-right">
+  <%= link_to " Delete", bookmark_path(@bookmark.id), :method => 'delete', :class => 'bookmark-trash fa fa-trash' %>
+</p>

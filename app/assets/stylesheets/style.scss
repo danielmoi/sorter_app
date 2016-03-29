@@ -215,8 +215,14 @@ p {
 }
 
 .bookmark-trash {
+
+}
+
+.bookmark--spacer-left {
   margin-left: 10px;
 }
+
+
 // OTHER
 .login__error-heading {
   text-align: center;
@@ -269,6 +275,10 @@ fieldset {
 // 6. HELPERS
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .truncate {

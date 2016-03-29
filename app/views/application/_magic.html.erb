@@ -1,7 +1,7 @@
 <li>
   <div class="bookmark">
 <div class="bookmark__details">
-  <h4><%= bookmark.title %></h4>
+  <h4><%= link_to bookmark.title, bookmark_path(bookmark.id) %></h4>
   <p class="truncate"><%= link_to bookmark.url, bookmark.url, :class => 'bookmark-link' %></p>
   <p class="truncate"><%= bookmark.description %></p>
   <p class="bookmark-created">
@@ -20,7 +20,7 @@
 
     <i class="bookmark-timestamp"><%= bookmark.created_at %></i>
 
-    <%= link_to "", bookmark_path(bookmark.id), :method => 'delete', :class => 'bookmark-trash fa fa-trash' %>
+    <%= link_to "", bookmark_path(bookmark.id), :method => 'delete', :class => 'bookmark-trash bookmark--spacer-left fa fa-trash' %>
 
 
   </p>
@@ -28,7 +28,7 @@
 
 
 <div class="bookmark__controls">
-  <%= link_to "", edit_bookmark_path(bookmark.id), :class => 'bookmark__button fa fa-pencil' %>
+  <%= link_to "", edit_bookmark_path(bookmark.id), :class => 'bookmark__button bookmark-edit fa fa-pencil' %>
 
 </div>
 

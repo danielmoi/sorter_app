@@ -19,6 +19,10 @@ class BookmarksController < ApplicationController
     end
   end
 
+  def show
+    @bookmark = Bookmark.find params[:id]
+  end
+
   def edit
     @bookmark = Bookmark.find params[:id]
   end
