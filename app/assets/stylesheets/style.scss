@@ -1,7 +1,11 @@
 // 1. GLOBAL
 $text: rgb(44, 62, 80);
 $primary: rgb(44, 62, 80);
-$warning: rgb(231, 76, 60); ///////////////////////////////////////////////////////////////////////////////
+$warning: rgb(231, 76, 60);
+$is-read: rgb(46, 204, 113);
+$is-unread: rgb(127, 140, 141);
+$is-fav: rgb(241, 196, 15);
+$is-notfav: rgb(127, 140, 141); ///////////////////////////////////////////////////////////////////////////////
 // 2. GENERIC
 // ( resets )
 // http://jaydenseric.com/blog/forget-normalize-or-resets-lay-your-own-css-foundation
@@ -173,11 +177,11 @@ p {
   margin-right: 10px;
   border: 1px solid $primary;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   &.fa {
-    line-height: 40px;
-    font-size: 1.3em;
+    line-height: 30px;
+    font-size: 1em;
     text-align: center;
   }
 }
@@ -188,6 +192,21 @@ p {
 .bookmark-fav,
 .bookmark-read {
   font-size: 0.8em;
+}
+
+.bookmark-read--is-read {
+  color: $is-read;
+}
+.bookmark-read--is-unread {
+  color: $is-unread;
+}
+
+.bookmark-fav--is-fav {
+  color: $is-fav;
+}
+
+.bookmark-fav--is-notfav {
+  color: $is-notfav;
 }
 // OTHER
 .login__error-heading {

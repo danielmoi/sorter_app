@@ -4,9 +4,23 @@
   <h4><%= bookmark.title %></h4>
   <p class="truncate"><%= link_to bookmark.url, bookmark.url, :class => 'bookmark-link' %></p>
   <p class="truncate"><%= bookmark.description %></p>
-  <p class="bookmark-created"><%= bookmark.created_at %></p>
-  <p class="bookmark-fav">Favourite? <%= bookmark.is_favourite %></p>
-  <p class="bookmark-read">Read? <%= bookmark.is_read %></p>
+  <p class="bookmark-created">
+
+    <% if bookmark.is_favourite == true %>
+      <i class="bookmark-fav bookmark-fav--is-fav fa fa-star"></i>
+    <% else %>
+      <i class="bookmark-fav bookmark-fav--is-notfav fa fa-star-o"></i>
+    <% end %>
+
+    <% if bookmark.is_read == true %>
+      <i class="bookmark-read bookmark-read--is-read fa fa-check-square-o"></i>
+    <% else %>
+      <i class="bookmark-read bookmark-read--is-unread fa fa-square-o"></i>
+    <% end %>
+
+    <i class="bookmark-timestamp"><%= bookmark.created_at %></i>
+
+  </p>
 </div>
 
 
