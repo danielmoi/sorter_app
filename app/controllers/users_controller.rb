@@ -5,6 +5,12 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def read
+    @user = @current_user
+
+  end
+
+
   # receive data from users/new (the form)
   def create
     @user = User.new user_params

@@ -38,7 +38,7 @@ class BookmarksController < ApplicationController
   # can't visit these URLs
   private
   def bookmark_params
-    params.require(:bookmark).permit(:url, :title, :description, :is_favourite, :is_unread, :category_ids => [])
+    params.require(:bookmark).permit(:url, :title, :description, :is_favourite, :is_read, :category_ids => [])
   end
 
 end

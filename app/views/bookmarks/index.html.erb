@@ -21,7 +21,7 @@
       <li><%= b.description %></li>
       <li class="bookmark-created"><%= b.created_at %></li>
       <li class="bookmark-fav">Favourite? <%= b.is_favourite %></li>
-      <li class="bookmark-unread">Unread? <%= b.is_unread %></li>
+      <li class="bookmark-read">Read? <%= b.is_read %></li>
       <li><%= link_to "Edit", edit_bookmark_path(b.id) %></li>
       <li><%= link_to "Delete", bookmark_path(b.id), :method => 'delete' %></li>
 

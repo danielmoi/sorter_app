@@ -1,0 +1,18 @@
+<div class="main__heading">
+  <h2>Reading List</h2>
+</div>
+
+<div class="main__subheading">
+  <p>Find me in app/views/users/read.html.erb</p>
+</div>
+
+<% @user.categories.each do |category| %>
+
+  <h3><%= category.name %></h3>
+
+    <ul>
+      <% category.bookmarks.each do |bookmark| %>
+        <li><%= bookmark.url if bookmark.is_read == false %></li>
+      <% end %>
+  </ul>
+<% end %>

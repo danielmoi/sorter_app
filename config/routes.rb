@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 
   ##### User routes #####
   resources :users, :only => [:new, :create, :index, :update, :show]
+  get '/read' => 'users#read'
   get '/signup' => 'users#new'
   get '/users/edit' => 'users#edit'
   # get '/users/profile' => 'users#show'
@@ -46,5 +47,8 @@ Rails.application.routes.draw do
 
   ##### Categories routes #####
   resources :categories
+
+  ##### Favourites #####
+  get '/favourites' => 'favourites#index'
 
 end

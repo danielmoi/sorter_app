@@ -11,6 +11,7 @@
 #  is_favourite :boolean          default("false")
 #  is_unread    :boolean          default("true")
 #  user_id      :integer
+#  is_read      :boolean          default("false")
 #
 
 class Bookmark < ActiveRecord::Base
