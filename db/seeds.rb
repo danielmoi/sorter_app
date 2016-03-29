@@ -1,44 +1,131 @@
-User.destroy_all
-u1 = User.create :email => 'me@me.com', :password => 'chicken', :password_confirmation => 'chicken'
-u2 = User.create :email => 'you@me.com', :password => 'chicken', :password_confirmation => 'chicken'
-
-Category.destroy_all
-# categories for user 1
-c1 = Category.create :name => 'ruby'
-c2 = Category.create :name => 'css'
-
-# categories for user 2
-c3 = Category.create :name => 'ruby'
-c4 = Category.create :name => 'css'
-
-Bookmark.destroy_all
-b1 = Bookmark.create :url => 'http://css-tricks.com', :title => 'CSS Tricks'
-b2 = Bookmark.create :url => 'http://guides.rubyonrails.org/association_basics.html', :title => 'Rails Associations'
-b3 = Bookmark.create :url => 'http://docs.ruby-lang.org/en/2.0.0/Array.html', :title => 'Ruby Array methods'
-b4 = Bookmark.create :url => 'https://davidwalsh.name/css-vertical-center', :title => 'Vertical Centering'
-
-# b1.categories << c2
-# b2.categories << c1
-# b3.categories << c1
-# b4.categories << c2
-
-
-
-# u1.bookmarks << b2 << b3
-# u2.bookmarks << b1 << b4
-
-# Need to add bookmarks indirectly?
-u1.categories << c1 << c2
-
-# categories are unique to each user (they choose their own)
-# so these are for user 2
-u2.categories << c3 << c4
-
-
-# These are categories for user 1
-c1.bookmarks << b3
-c2.bookmarks << b4
-
-# These are categories for user 2
-c3.bookmarks << b2
-c4.bookmarks << b1
+Bookmark.create!([
+  {url: "http://css-tricks.com", title: "CSS Tricks", description: nil, is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "http://guides.rubyonrails.org/association_basics.html", title: "Rails Associations", description: nil, is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "http://jaydenseric.com/blog/forget-normalize-or-resets-lay-your-own-css-foundation", title: "", description: "", is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "http://jaydenseric.com/blog/forget-normalize-or-resets-lay-your-own-css-foundation", title: "", description: "", is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "http://jaydenseric.com/blog/forget-normalize-or-resets-lay-your-own-css-foundation", title: "", description: "", is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "http://jaydenseric.com/blog/forget-normalize-or-resets-lay-your-own-css-foundation", title: "Baseline CSS rules", description: "Awesome article", is_favourite: true, is_unread: false, user_id: nil, is_read: false, notes: nil},
+  {url: "http://jaydenseric.com/blog/forget-normalize-or-resets-lay-your-own-css-foundation", title: "CSS", description: "Something", is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "http://jaydenseric.com/blog", title: "Blog", description: "", is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "http://jaydenseric.com/blog", title: "", description: "", is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "http://jaydenseric.com/blog", title: "", description: "", is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "http://jaydenseric.com/blog/how-to-write-smarter-css-animations", title: "", description: "", is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "http://jaydenseric.com/blog/how-to-write-smarter-css-animations", title: "", description: "", is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "http://jaydenseric.com/blog/how-to-write-smarter-css-animations", title: "", description: "", is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "", description: "", is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "", description: "", is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/filling_in_the_layout", title: "", description: "", is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/filling_in_the_layout", title: "", description: "", is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/filling_in_the_layout", title: "", description: "", is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/filling_in_the_layout", title: "", description: "", is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "", description: "", is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "Rails Tutorial", description: "Rails Tutorial", is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "Rails Tutorial", description: "Rails Tutorial", is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "Rails Tutorial", description: "Rails Tutorial", is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "SDF", description: "", is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "SDF", description: "", is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "http://ruby-lang.org", title: "Ruby", description: "", is_favourite: false, is_unread: true, user_id: 9, is_read: false, notes: nil},
+  {url: "http://ruby-lang.org", title: "Both", description: "", is_favourite: false, is_unread: true, user_id: 9, is_read: false, notes: nil},
+  {url: "http://google.com", title: "Both 3", description: "", is_favourite: false, is_unread: true, user_id: 9, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "Both 4", description: "", is_favourite: false, is_unread: true, user_id: 9, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "", description: "Both 5", is_favourite: false, is_unread: true, user_id: 9, is_read: false, notes: nil},
+  {url: "http://google.com", title: "Not read", description: "", is_favourite: false, is_unread: true, user_id: 9, is_read: false, notes: nil},
+  {url: "http://google.com", title: "Read", description: "", is_favourite: false, is_unread: true, user_id: 9, is_read: false, notes: nil},
+  {url: "http://read.com", title: "Read", description: "", is_favourite: false, is_unread: true, user_id: 9, is_read: false, notes: nil},
+  {url: "http://read1.com", title: "Read1", description: "", is_favourite: false, is_unread: true, user_id: 9, is_read: true, notes: nil},
+  {url: "http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#method-i-check_box", title: "Something 123", description: "Some description", is_favourite: true, is_unread: true, user_id: 9, is_read: false, notes: nil},
+  {url: "http://jaydenseric.com/blog/how-to-write-smarter-css-animations", title: "", description: "", is_favourite: false, is_unread: true, user_id: nil, is_read: true, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "Tutorial", description: "something", is_favourite: false, is_unread: true, user_id: 9, is_read: true, notes: nil},
+  {url: "http://docs.ruby-lang.org/en/2.0.0/Array.html", title: "Ruby Array methods", description: "", is_favourite: false, is_unread: true, user_id: nil, is_read: false, notes: nil},
+  {url: "http://apidock.com/rails/ActionView/Helpers/FormBuilder/check_box", title: "", description: "", is_favourite: false, is_unread: true, user_id: 12, is_read: false, notes: nil},
+  {url: "http://apidock.com/rails/ActionView/Helpers/FormBuilder/check_box", title: "Hello", description: "", is_favourite: false, is_unread: true, user_id: 12, is_read: false, notes: nil},
+  {url: "http://apidock.com/rails/ActionView/Helpers/FormBuilder/check_box", title: "", description: "", is_favourite: false, is_unread: true, user_id: 9, is_read: false, notes: nil},
+  {url: "http://fontawesome.io/icons/", title: "Font Awesome", description: "", is_favourite: true, is_unread: true, user_id: 12, is_read: false, notes: nil},
+  {url: "http://javascript.com", title: "Javascript", description: "", is_favourite: true, is_unread: true, user_id: 12, is_read: false, notes: nil},
+  {url: "http://google.com", title: "", description: "", is_favourite: false, is_unread: true, user_id: 12, is_read: false, notes: nil},
+  {url: "http://google.com", title: "Google", description: "lkj", is_favourite: false, is_unread: true, user_id: 12, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "Chapter 4: Rails-flavored Ruby\n | Ruby on Rails Tutorial (3rd Ed.) |  Softcover.io", description: "", is_favourite: false, is_unread: true, user_id: 12, is_read: true, notes: nil},
+  {url: "http://jaydenseric.com/blog/how-to-write-smarter-css-animations", title: "Jayden Seric | How to write smarter CSS animations", description: "", is_favourite: false, is_unread: true, user_id: 12, is_read: false, notes: nil},
+  {url: "http://jaydenseric.com/blog/how-to-write-smarter-css-animations", title: "Jayden Seric | How to write smarter CSS animations", description: "There are several tricks to writing efficient CSS animations that few people seem aware of. You can omit start or end frames for greater versatility with less code, combine similar frames, combine animations to reduce keyframes declarations, reverse animations to avoid separate \"In\" and \"Out\" keyframes and use negative delays to run only portions of animations.", is_favourite: true, is_unread: true, user_id: 12, is_read: true, notes: nil},
+  {url: "https://css-tricks.com", title: "CSS-Tricks", description: "Tips, Tricks, and Techniques on using Cascading Style Sheets.", is_favourite: false, is_unread: true, user_id: 12, is_read: false, notes: nil},
+  {url: "http://google.com", title: "Google", description: "", is_favourite: false, is_unread: true, user_id: 12, is_read: false, notes: nil},
+  {url: "http://www.sitepoint.com/nokogiri-fundamentals-extract-html-web/", title: "Nokogiri Fundamentals: Extract HTML from the Web", description: "Darko Gjorgjievski shows your the right way to learn Nokogiri to extract data from the web. Scrape HTML like a pro without all the headaches of learning.", is_favourite: true, is_unread: true, user_id: 12, is_read: false, notes: nil}
+])
+Bookmark::HABTM_Categories.create!([
+  {bookmark_id: 19, category_id: 11},
+  {bookmark_id: 18, category_id: 13},
+  {bookmark_id: 17, category_id: 14},
+  {bookmark_id: 32, category_id: 12},
+  {bookmark_id: 33, category_id: 11},
+  {bookmark_id: 60, category_id: 11},
+  {bookmark_id: 61, category_id: 11},
+  {bookmark_id: 62, category_id: 12},
+  {bookmark_id: 63, category_id: 12},
+  {bookmark_id: 64, category_id: 12},
+  {bookmark_id: 51, category_id: 11},
+  {bookmark_id: 51, category_id: 12},
+  {bookmark_id: 19, category_id: 12},
+  {bookmark_id: 19, category_id: 15},
+  {bookmark_id: 67, category_id: 11},
+  {bookmark_id: 68, category_id: 19},
+  {bookmark_id: 69, category_id: 20},
+  {bookmark_id: 70, category_id: 19},
+  {bookmark_id: 71, category_id: 19},
+  {bookmark_id: 72, category_id: 19},
+  {bookmark_id: 73, category_id: 19},
+  {bookmark_id: 74, category_id: 19},
+  {bookmark_id: 75, category_id: 19},
+  {bookmark_id: 76, category_id: 19},
+  {bookmark_id: 77, category_id: 19}
+])
+Category.create!([
+  {name: "ruby", user_id: 9},
+  {name: "css", user_id: 9},
+  {name: "ruby", user_id: 10},
+  {name: "css", user_id: 10},
+  {name: "HTML", user_id: 9},
+  {name: "HTML", user_id: 12},
+  {name: "JavaScript", user_id: 12}
+])
+Category::HABTM_Bookmarks.create!([
+  {bookmark_id: 19, category_id: 11},
+  {bookmark_id: 18, category_id: 13},
+  {bookmark_id: 17, category_id: 14},
+  {bookmark_id: 32, category_id: 12},
+  {bookmark_id: 33, category_id: 11},
+  {bookmark_id: 60, category_id: 11},
+  {bookmark_id: 61, category_id: 11},
+  {bookmark_id: 62, category_id: 12},
+  {bookmark_id: 63, category_id: 12},
+  {bookmark_id: 64, category_id: 12},
+  {bookmark_id: 51, category_id: 11},
+  {bookmark_id: 51, category_id: 12},
+  {bookmark_id: 19, category_id: 12},
+  {bookmark_id: 19, category_id: 15},
+  {bookmark_id: 67, category_id: 11},
+  {bookmark_id: 68, category_id: 19},
+  {bookmark_id: 69, category_id: 20},
+  {bookmark_id: 70, category_id: 19},
+  {bookmark_id: 71, category_id: 19},
+  {bookmark_id: 72, category_id: 19},
+  {bookmark_id: 73, category_id: 19},
+  {bookmark_id: 74, category_id: 19},
+  {bookmark_id: 75, category_id: 19},
+  {bookmark_id: 76, category_id: 19},
+  {bookmark_id: 77, category_id: 19}
+])
+Favourite.create!([
+  {user_id: 10, bookmark_id: nil, is_favourite: nil}
+])
+User.create!([
+  {name: nil, email: "you@me.com", password_digest: "$2a$10$MX0mGCgsYF4dqqIDGLvGmuka9DYxjo4lJGjNXXpAdqEKV556U.Vt2"},
+  {name: nil, email: "hello@hello.com", password_digest: "$2a$10$zRsQJQhnOeab63MsEfE/UOFcuN9ju/dYsjpzVktUshQoG6oR6ynv."},
+  {name: nil, email: "red@red.com", password_digest: "$2a$10$iMEKmRNY4aomm2WXAWfcFu007b1vvv7WHu1JTWbWBSz7rcumDU7wy"},
+  {name: nil, email: "red@red.com", password_digest: "$2a$10$OBqiFEsDNyO4X/RVzxopo.spoa6Ltax79JQvDOKXYvrKHbdM9NJPS"},
+  {name: nil, email: "green@green.com", password_digest: "$2a$10$V6r/42Vdf81CSoDqyM4BKehcfzGRzDSEVVrOFh0ENVyhDSVH4XdfW"},
+  {name: nil, email: "blue@blue.com", password_digest: "$2a$10$e2slAPDg.Dij0.T/..klpuSlwN.k7vsQWmgKpLoWISkAOiA9x81Wm"},
+  {name: nil, email: "blue@blue.com", password_digest: "$2a$10$f.6EyftfWGzJPJiJIrK13eE2i9m84TzaRcV87g0iQZXnLQ0NmBfK2"},
+  {name: nil, email: "blue@blue.com", password_digest: "$2a$10$.Krac/suE.Gy7Yr51s3JleZ93ROLZk56l7nEyq5C/xpj5FDa25cki"},
+  {name: nil, email: "blue@blue.com", password_digest: "$2a$10$ToYSPXGSNOenvxNc5sH0AevGkGqDTJh8WljJ18u79G156BnBmOWHu"},
+  {name: nil, email: "me@me.com", password_digest: "$2a$10$rZBx8A0JH2J0CytcHWRdVOMesJDGZfj9IqddeUp/RWuKqvUkhoUme"}
+])

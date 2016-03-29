@@ -26,8 +26,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-# D3
+# D3 160330
 gem 'd3_rails'
+
+# Seed Dump 160330
+gem 'seed_dump'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
