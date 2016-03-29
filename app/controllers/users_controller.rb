@@ -15,6 +15,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = @current_user
+  end
+
   # render view for edit profile
   def edit
     @user = @current_user

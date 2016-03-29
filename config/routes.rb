@@ -19,9 +19,10 @@ Rails.application.routes.draw do
   get '/help' => 'pages#help'
 
   ##### User routes #####
-  resources :users, :only => [:new, :create, :index, :update]
+  resources :users, :only => [:new, :create, :index, :update, :show]
   get '/signup' => 'users#new'
   get '/users/edit' => 'users#edit'
+  # get '/users/profile' => 'users#show'
   # get '/bookmarks' => 'users#index'
 
 

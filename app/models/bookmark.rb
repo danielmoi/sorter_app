@@ -10,7 +10,6 @@
 #  updated_at   :datetime
 #  is_favourite :boolean          default("false")
 #  is_unread    :boolean          default("true")
-#  category_id  :integer
 #  user_id      :integer
 #
 

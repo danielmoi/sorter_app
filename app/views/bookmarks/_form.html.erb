@@ -33,15 +33,15 @@
   <%= f.check_box :is_unread, :class => 'checkbox' %>
 </fieldset>
 
-<fieldset>
-  <%= f.label :category_id, :class => 'label' %>
+<!-- <fieldset>
+  <p>Category</p>
 
   <% @current_user.categories.each do |category| %>
-  <%= f.check_box :category_id, { :class => 'checkbox' }, category.id %>
-  <%= f.label :category_id, category.name %>
+    <%= f.label :category_id, category.name %>
+    <%= f.check_box :category_id, { :class => 'checkbox' }, category.id %>
   <% end %>
 
-</fieldset>
+</fieldset> -->
 
 <fieldset class="btn-container">
   <%= f.submit :class => 'btn' %>
