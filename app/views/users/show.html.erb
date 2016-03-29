@@ -1,7 +1,19 @@
 <div class="main__heading">
-  <h2>Profile for: <%= @user.name %></h2>
+  <h2>My Profile</h2>
 </div>
 
-<div class="main__subheading">
-  <p>Find me in app/views/users/show.html.erb</p>
+<div class="main__subheading"></div>
+
+<div class="profile-container">
+  <h4>Name</h4>
+  <p>
+    <% if @user.name %>
+    <%= @user.name %>
+  <% else %>
+    Not provided
+    <% end %>
+  </p>
+
+  <h4>Email</h4>
+  <p><%= @user.email %></p>
 </div>

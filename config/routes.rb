@@ -1,16 +1,3 @@
-# == Route Map
-#
-#   Prefix Verb  URI Pattern          Controller#Action
-#     root GET   /                    pages#home
-#    users GET   /users(.:format)     users#index
-#          POST  /users(.:format)     users#create
-# new_user GET   /users/new(.:format) users#new
-#     user PATCH /users/:id(.:format) users#update
-#          PUT   /users/:id(.:format) users#update
-#   signup GET   /signup(.:format)    users#new
-#    login GET   /login(.:format)     session#new
-#
-
 Rails.application.routes.draw do
 
   ##### Static pages routes #####
@@ -19,10 +6,10 @@ Rails.application.routes.draw do
   get '/help' => 'pages#help'
 
   ##### User routes #####
+  get '/users/edit' => 'users#edit'
   resources :users, :only => [:new, :create, :index, :update, :show]
   get '/read' => 'users#read'
   get '/signup' => 'users#new'
-  get '/users/edit' => 'users#edit'
   # get '/users/profile' => 'users#show'
   # get '/bookmarks' => 'users#index'
 

@@ -18,7 +18,7 @@
             <!--  Conditional links -->
             <% if @current_user.present? %>
             <li class="nav-list__item nav-list__item--header-users">Logged in as:
-              <%= @current_user.email %></li>
+              <%= link_to @current_user.email, user_path(@current_user.id) %></li>
             <li class="nav-list__item nav-list__item--header-users"><%= link_to 'Edit profile', users_edit_path %></li>
             <li class="nav-list__item nav-list__item--header-users"><%= link_to 'Log out', login_path, :method => :delete %></li>
 
