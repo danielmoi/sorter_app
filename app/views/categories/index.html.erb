@@ -2,10 +2,15 @@
   <h2>My Categories</h2>
 </div>
 
-<div class="main__subheading">
-  <p>Find me in app/views/categories/index.html.erb</p>
+<div class="main__subheading"></div>
+
+<div class="btn-container">
+  <%= link_to 'New category', new_category_path, :class => 'btn' %>
 </div>
 
-  <% @user.categories.each do |category| %>
-  <h3 class="text-center"><%= link_to category.name, category %></h3>
-  <% end %>
+<% @user.categories.each do |category| %>
+<h3 class="text-center"><%= link_to category.name, category %></h3>
+<div class="text-center">
+  <%= link_to "Edit", edit_category_path(category.id) %>
+</div>
+<% end %>
