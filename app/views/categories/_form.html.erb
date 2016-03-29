@@ -1,0 +1,12 @@
+<%= form_for @category, :html => { :class => 'form' } do |f| %>
+
+<fieldset>
+  <%= f.label :name, "Name: ", :class => 'label' %>
+  <%= f.text_field :name, :required => true, :class => 'input' %>
+</fieldset>
+
+<fieldset class="btn-container">
+  <%= f.submit :class => 'btn' %>
+</fieldset>
+
+<% end %>

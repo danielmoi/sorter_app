@@ -10,6 +10,7 @@
   <% @category.bookmarks.each do |b| %>
 
 <!--  TODO: Mark as read link -->
+<!--  TODO: Make this a partial for all bookmarks -->
   <ul>
     <li><%= b.title %></li>
     <li><%= link_to b.url, b.url, :class => 'bookmark-link' %></li>
