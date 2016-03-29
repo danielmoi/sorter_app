@@ -38,4 +38,9 @@ Rails.application.routes.draw do
   ##### Favourites #####
   get '/favourites' => 'favourites#index'
 
+  ##### Graph routes #####
+  get '/graphs' => 'graphs#index'
+  get '/graphs/data', :defaults => { :format => 'json' }
+
+
 end
