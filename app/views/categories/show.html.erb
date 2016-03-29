@@ -5,23 +5,12 @@
 <div class="main__subheading">
 </div>
 
-
-  <% @category.bookmarks.each do |b| %>
-
 <!--  TODO: Mark as read link -->
 <!--  TODO: Make this a partial for all bookmarks -->
   <ul>
-    <li><%= b.title %></li>
-    <li><%= link_to b.url, b.url, :class => 'bookmark-link' %></li>
-    <li><%= b.description %></li>
-    <li class="bookmark-created"><%= b.created_at %></li>
-    <li class="bookmark-fav">Favourite? <%= b.is_favourite %></li>
-    <li class="bookmark-read">Read? <%= b.is_read %></li>
-    <li><%= link_to "Edit", edit_bookmark_path(b.id) %></li>
-    <li><%= link_to "Delete", bookmark_path(b.id), :method => 'delete' %></li>
+    <% @category.bookmarks.each do |bookmark| %>
+
+    <%= render :partial => 'magic', locals: { :bookmark => bookmark } %>
+    <% end %>
 
   </ul>
-
-
-
-  <% end %>
