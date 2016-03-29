@@ -13,6 +13,16 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def edit
+    @category = Category.find params[:id]
+  end
+
+  def update
+    category = Category.find params[:id]
+    category.update category_params
+    redirect_to categories_path
+  end
+
   def index
     @user = @current_user
   end
@@ -21,9 +31,6 @@ class CategoriesController < ApplicationController
     @user = @current_user
     @category = Category.find params[:id]
 
-  end
-
-  def edit
   end
 
   def delete
