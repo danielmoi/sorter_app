@@ -10,6 +10,11 @@
   <% if @current_user.present? %>
 
   <p>You are logged in as: <%= @current_user.email %></p>
+
+  <div class="btn-container">
+    <%= link_to 'New bookmark', new_bookmark_path, :class => 'btn' %>
+  </div>
+
   <div class="btn-container">
     <%= link_to 'My Bookmarks', bookmarks_path, :class => 'btn' %>
   </div>
