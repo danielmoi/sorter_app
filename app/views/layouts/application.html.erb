@@ -60,7 +60,8 @@
 
   <div class="sub-nav">
     <div class="container">
-
+      <%= link_to "My bookmarks", user_bookmarks_path(@current_user.id), :class => 'sub-nav__item' %>
+      <%= link_to "My categories", categories_path, :class => 'sub-nav__item' %>
       <%= link_to "View profile", user_path(@current_user.id), :class => 'sub-nav__item' %>
       <%= link_to "Edit profile", users_edit_path, :class => 'sub-nav__item' %>
       <%= link_to "Help", help_path, :class => 'sub-nav__item' %>
