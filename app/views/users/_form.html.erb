@@ -28,6 +28,11 @@
   <%= f.password_field :password_confirmation, :required => true, :class => 'input' %>
 </fieldset>
 
+<fieldset>
+  <%= f.label :image_url, "Profile Image", :class => 'label' %>
+  <%= f.file_field :image_url, :class => 'input' %>
+</fieldset>
+
 <fieldset class="text-center">
   <%= f.submit "Save changes", :class => 'btn' %>
 </fieldset>

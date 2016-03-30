@@ -13,7 +13,11 @@ class UsersController < ApplicationController
   # receive data from users/new (the form)
   def create
     @user = User.new user_params
+    req = Cloudinary::Uploader.upload( user_params[:image_url])
+    @user.image_url = req["url"]
+
     if @user.save
+
       session[:user_id] = @user.id
 
       # Create new category for new user_id
@@ -52,7 +56,7 @@ class UsersController < ApplicationController
   # can't visit these URLs
   private
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation, :image)
+    params.require(:user).permit(:email, :password, :password_confirmation, :image_url, :name)
   end
 
 end

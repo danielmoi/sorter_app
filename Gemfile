@@ -32,6 +32,9 @@ gem 'd3_rails'
 # Seed Dump 160330
 gem 'seed_dump'
 
+# Cloudinary 160330
+gem 'cloudinary'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
