@@ -45,7 +45,11 @@ class BookmarksController < ApplicationController
   end
 
   def edit
-    @bookmark = Bookmark.find params[:id]
+    if @user == @current_user
+      @bookmark = Bookmark.find params[:id]
+    else
+      redirect_to bookmarks_path
+    end
   end
 
   def update

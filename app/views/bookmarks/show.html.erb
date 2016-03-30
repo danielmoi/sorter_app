@@ -2,6 +2,14 @@
   <h2><%= @bookmark.title %></h2>
 </div>
 
+<div class="main__subheading">
+  <% if @current_user.id == @bookmark.user_id %>
+  <p>My bookmark (logged in as: <%= link_to User.find(@bookmark.user_id).email, user_bookmarks_path(@bookmark.user_id) %>)</p>
+  <% else %>
+  <p>Bookmark for <%= link_to User.find(@bookmark.user_id).email, user_bookmarks_path(@bookmark.user_id) %></p>
+  <% end %>
+</div>
+
 <h4>URL</h4>
 <p>
   <%= link_to @bookmark.url, @bookmark.url, :class => 'bookmark-link' %>
@@ -21,7 +29,7 @@
 <h4>Categories</h4>
 <ul>
   <% @bookmark.categories.each do |category| %>
-    <li><%= link_to category.name, category_path(category.id) %></li>    
+    <li><%= link_to category.name, category_path(category.id) %></li>
   <% end %>
 </ul>
 
@@ -42,6 +50,7 @@
   <% end %>
 </p>
 
+<% if @bookmark.user_id == @current_user.id %>
 <p>
   <%= link_to " Edit", edit_bookmark_path(@bookmark.id), :class => 'bookmark-edit fa fa-pencil' %>
 </p>
@@ -49,3 +58,4 @@
 <p class="text-right">
   <%= link_to " Delete", bookmark_path(@bookmark.id), :method => 'delete', :class => 'bookmark-trash fa fa-trash' %>
 </p>
+<% end %>
