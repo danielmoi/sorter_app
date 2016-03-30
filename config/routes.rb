@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   end
   get '/read' => 'users#read'
   get '/signup' => 'users#new'
+  get '/favourites' => 'users#favourites'
   # get '/users/profile' => 'users#show'
   # get '/bookmarks' => 'users#index'
 
@@ -36,9 +37,6 @@ Rails.application.routes.draw do
 
   ##### Categories routes #####
   resources :categories
-
-  ##### Favourites #####
-  get '/favourites' => 'favourites#index'
 
   ##### Graph routes #####
   get '/graphs' => 'graphs#index'

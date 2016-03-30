@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Architects+Daughter);
+
 // 1. GLOBAL
 $text: rgb(44, 62, 80);
 $primary: rgb(44, 62, 80);
@@ -89,7 +91,7 @@ h1 {
   font-size: 2em;
   padding: 10px 0;
   @media screen and (min-width: 600px) {
-    font-size: 3em;
+    font-size: 4em;
   }
 }
 
@@ -129,6 +131,11 @@ body {
 .container--home {
   margin-top: 30%;
 }
+.header-title {
+  font-family: "Architects Daughter", Helvetica,  sans-serif;
+}
+
+
 .header {
   text-align: center;
   // background: rgb(236, 240, 241);
@@ -239,6 +246,7 @@ body {
   border-radius: 10px;
   position: relative;
   background-color: rgba(255, 255, 255, 0.4);
+  // background-image: url('note.jpg');
 }
 
 .bookmark__details {
@@ -273,7 +281,7 @@ body {
 }
 .bookmark-fav.fa,
 .bookmark-read.fa {
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 .bookmark-read--is-read {

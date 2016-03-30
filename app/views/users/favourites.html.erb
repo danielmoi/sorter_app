@@ -1,0 +1,19 @@
+<div class="main__heading">
+  <h2>My Favourites</h2>
+</div>
+
+<div class="main__subheading">
+</div>
+
+<% @user.categories.each do |category| %>
+
+  <h3><%= category.name %></h3>
+
+    <ul>
+      <% category.bookmarks.each do |bookmark| %>
+        <% if bookmark.is_favourite == true %>
+        <%= render :partial => 'magic', locals: { :bookmark => bookmark } %>
+        <% end %>
+      <% end %>
+  </ul>
+<% end %>

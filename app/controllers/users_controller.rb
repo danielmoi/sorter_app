@@ -5,8 +5,15 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  # Reading list
   def read
     @user = @current_user
+  end
+
+  # Favourites
+  def favourites
+    @user = @current_user
+
   end
 
 
@@ -45,6 +52,8 @@ class UsersController < ApplicationController
     @user = @current_user
   end
 
+
+
   # render view for edit profile
   def edit
     @user = @current_user
@@ -58,9 +67,6 @@ class UsersController < ApplicationController
       @user.name = "Murakami"
     end
 
-
-
-
     if @user.update user_params
       if user_params[:image_url]
         req = Cloudinary::Uploader.upload( user_params[:image_url])
@@ -72,6 +78,8 @@ class UsersController < ApplicationController
       render :edit
     end
   end
+
+
 
 
   # can't visit these URLs
