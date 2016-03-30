@@ -1,8 +1,7 @@
 <div class="main__heading">
-  <h2>Login</h2>
+  <!-- <h2>Login</h2> -->
 </div>
 <div class="main__subheading">
-  <p>Find me in app/views/session/new.html.erb</p>
 </div>
 
 <!--  Display error from login fail (redirect from login `else`)-->
@@ -26,6 +25,12 @@
 
 <fieldset class="text-center">
   <%= submit_tag 'Login', :class => 'btn' %>
+</fieldset>
+
+<fieldset>
+  <p class="text-center">
+    If you're not yet a sorter, you can <%= link_to "Sign Up", signup_path, :class => 'link-underline' %>
+  </p>
 </fieldset>
 
 <% end %>

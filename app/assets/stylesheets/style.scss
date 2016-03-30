@@ -350,7 +350,7 @@ body {
   max-width: 80%;
   margin: 2em auto;
   padding: 2em;
-  border: 1px solid $primary;
+  // border: 1px solid $primary;
   border-radius: 1em;
 }
 fieldset {
@@ -361,16 +361,16 @@ fieldset {
   display: inline;
 }
 .input {
-  display: inline-block;
-  width: 50%;
+  display: block;
+  width: 100%;
   font-size: 1em;
   padding: 0.5em;
-  border: 1px solid $primary;
+  border: none;
+  background: rgba(255,255,255,0.6);
 }
 .label {
-  display: inline-block;
-  width: 25%;
-  text-align: right;
+  display: block;
+  margin-bottom: 5px;
 }
 // 6. HELPERS
 .text-center {
@@ -386,4 +386,8 @@ fieldset {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.link-underline {
+  text-decoration: underline;
 }
