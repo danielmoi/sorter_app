@@ -185,6 +185,7 @@ body {
   text-align: center;
   padding: 5px 0 10px 0;
 }
+
 .nav-list__icon {
   display: block;
   text-align: center;
@@ -194,7 +195,11 @@ body {
     color: #fff;
   }
 }
-
+.hamburger {
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
+}
 .sub-nav {
   display: none;
   position: fixed;
@@ -202,6 +207,13 @@ body {
   width: 100%;
   background: $primary-light;
   z-index: 100;
+  @media screen and (min-width: 600px) {
+    display: block;
+  }
+}
+
+.container--sub-nav {
+  text-align: center;
 }
 
 .sub-nav__item {
@@ -210,6 +222,11 @@ body {
   padding: 10px 0;
   text-align: center;
   color: #fff;
+  @media screen and (min-width: 600px) {
+    display: inline;
+    line-height: 40px;
+    padding: 10px;
+  }
 }
 
 .header__user {
