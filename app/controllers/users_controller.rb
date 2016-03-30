@@ -53,9 +53,19 @@ class UsersController < ApplicationController
   # handle edit form submission
   def update
     @user = @current_user
-    req = Cloudinary::Uploader.upload( user_params[:image_url])
+
+    if user_params[:name].strip.empty?
+      @user.name = "Murakami"
+    end
+
+
+
+
     if @user.update user_params
-      @user.image_url = req["url"]
+      if user_params[:image_url]
+        req = Cloudinary::Uploader.upload( user_params[:image_url])
+        @user.image_url = req["url"]
+      end
       @user.save
       redirect_to root_path
     else
