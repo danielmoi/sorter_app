@@ -34,7 +34,20 @@
 </fieldset>
 
 <fieldset class="text-center">
-  <%= f.submit "Save changes", :class => 'btn' %>
+  <% if @current_user == nil %>
+    <%= f.submit "Sign up", :class => 'btn' %>
+
+    <p class="text-center">
+      If you're already a sorter, you can <%= link_to "Log in", login_path, :class => 'link-underline' %>
+    </p>
+
+  <% else %>
+    <%= f.submit "Save changes", :class => 'btn' %>
+  <% end %>
+
 </fieldset>
+
+
+
 
 <% end %>
