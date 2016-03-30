@@ -4,9 +4,9 @@
 
 <div class="main__subheading">
   <% if @current_user.id == @bookmark.user_id %>
-  <p>My bookmark (logged in as: <%= link_to User.find(@bookmark.user_id).email, user_bookmarks_path(@bookmark.user_id) %>)</p>
+  <p>This bookmark belongs to <%= link_to "me", user_bookmarks_path(@bookmark.user_id), :class => 'link-underline' %></p>
   <% else %>
-  <p>Bookmark for <%= link_to User.find(@bookmark.user_id).email, user_bookmarks_path(@bookmark.user_id) %></p>
+  <p>This bookmark belongs to <%= link_to User.find(@bookmark.user_id).email, user_bookmarks_path(@bookmark.user_id), :class => 'link-underline' %></p>
   <% end %>
 </div>
 
@@ -35,10 +35,10 @@
 
 <p>Favourite status:
   <% if @bookmark.is_favourite == true %>
-  <i class="bookmark-fav bookmark-fav--is-fav fa fa-star"></i>
+  <i class="bookmark-fav bookmark-fav--is-fav fa fa-heart"></i>
   (favourited)
 <% else %>
-  <i class="bookmark-fav bookmark-fav--is-notfav fa fa-star-o"></i> (normal)
+  <i class="bookmark-fav bookmark-fav--is-notfav fa fa-heart-o"></i> (normal)
   <% end %>
 </p>
 
