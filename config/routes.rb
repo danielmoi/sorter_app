@@ -7,7 +7,9 @@ Rails.application.routes.draw do
 
   ##### User routes #####
   get '/users/edit' => 'users#edit'
-  resources :users, :only => [:new, :create, :index, :update, :show]
+  resources :users, :only => [:new, :create, :index, :update, :show] do
+    resources :bookmarks
+  end
   get '/read' => 'users#read'
   get '/signup' => 'users#new'
   # get '/users/profile' => 'users#show'

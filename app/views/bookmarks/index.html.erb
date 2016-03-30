@@ -1,5 +1,9 @@
 <div class="main__heading">
-  <h2>My bookmarks</h2>
+  <% if @user == @current_user %>
+    <h2>My bookmarks</h2>
+  <% else %>
+    <h2>Bookmarks for <%= @user.email %></h2>
+  <% end %>
 </div>
 
 <div class="main__subheading">

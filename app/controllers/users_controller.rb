@@ -15,6 +15,12 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       session[:user_id] = @user.id
+
+      # Create new category for new user_id
+      category = Category.new :name => "Uncategorised"
+      category.user_id = @user.id
+      category.save
+
       redirect_to root_path
     else
       render :new
