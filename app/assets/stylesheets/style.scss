@@ -1,7 +1,7 @@
 // 1. GLOBAL
 $text: rgb(44, 62, 80);
 $primary: rgb(44, 62, 80);
-$primary-light: rgba(44, 62, 80, 0.6);
+$primary-light: rgb(122, 151, 190);
 $warning: rgb(231, 76, 60);
 $is-read: rgb(46, 204, 113);
 $is-unread: rgb(127, 140, 141);
@@ -189,6 +189,7 @@ body {
   bottom: 50px;
   width: 100%;
   background: $primary-light;
+  z-index: 100;
 }
 
 .sub-nav__item {
