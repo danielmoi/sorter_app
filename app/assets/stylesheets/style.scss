@@ -308,7 +308,14 @@ body {
 }
 // GRAPHC
 .graph-container {
-  margin: 2em 0;
+  margin: 2em auto;
+}
+
+canvas {
+  display: block;
+  height: 400px;
+  width: 600px;
+
 }
 // PROFILE
 .profile__image-container {

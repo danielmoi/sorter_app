@@ -11,15 +11,24 @@ class GraphsController < ApplicationController
   end
 
   def data2
-    my_arr = []
+
+    labels = []
+    counts = []
+
+
     User.all.each do |user|
-      my_arr << [user.email, user.categories.size]
-      # my_arr << user.categories.size
+      labels << user.email
+      counts << user.categories.size
     end
+
+    my_data = {
+      :labels => labels,
+      :counts => counts
+    }
 
     respond_to do |format|
       format.json {
-        render :json => my_arr
+        render :json => my_data
       }
     end
   end
