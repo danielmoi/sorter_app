@@ -5,7 +5,7 @@ $primary-light: rgb(122, 151, 190);
 $warning: rgb(231, 76, 60);
 $is-read: rgb(46, 204, 113);
 $is-unread: rgb(127, 140, 141);
-$is-fav: rgb(241, 196, 15);
+$is-fav: rgb(241, 96, 158);
 $is-notfav: rgb(127, 140, 141);
 $red: rgb(192, 57, 43);
 
@@ -148,13 +148,14 @@ body {
   text-align: center;
   z-index: 100;
   height: 50px;
+  background: $primary;
 
 }
 
 .nav-list {
   padding: 10px 0 0;
-  background: $primary;
-  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
   color: #fff;
   text-align: center;
 }
@@ -266,10 +267,12 @@ body {
 .bookmark-link {
   font-style: italic;
 }
-.bookmark-created,
-.bookmark-fav,
-.bookmark-read {
+.bookmark-created {
   font-size: 0.8em;
+}
+.bookmark-fav.fa,
+.bookmark-read.fa {
+  font-size: 2em;
 }
 
 .bookmark-read--is-read {
