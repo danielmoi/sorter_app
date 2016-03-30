@@ -12,6 +12,7 @@ class BookmarksController < ApplicationController
 
   def new
     @bookmark = Bookmark.new
+    @bookmark.categories << @current_user.categories.first
   end
 
   def create
