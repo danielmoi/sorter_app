@@ -6,7 +6,7 @@
   <div class="user-each">
 
 <div class="user-index__image-container">
-  <%= image_tag user.image_url, :class => 'profile-image profile-image--small' %>
+  <%= image_tag user.image_url, :class => 'profile-image profile-image--small', :alt => 'Profile image' %>
 
 </div>
 
@@ -28,7 +28,7 @@
   <p>
     <b> <%= link_to "All bookmarks", user_bookmarks_path(user.id) %></b>
   </p>
-  
+
 </div>
 
 
