@@ -13,8 +13,16 @@ class UsersController < ApplicationController
   # receive data from users/new (the form)
   def create
     @user = User.new user_params
-    req = Cloudinary::Uploader.upload( user_params[:image_url])
-    @user.image_url = req["url"]
+
+    if user_params[:name].strip.empty?
+      @user.name = "Murakami"
+    end
+
+
+    if user_params[:image_url]
+      req = Cloudinary::Uploader.upload( user_params[:image_url])
+      @user.image_url = req["url"]
+    end
 
     if @user.save
 
