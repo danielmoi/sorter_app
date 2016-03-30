@@ -113,6 +113,10 @@ p {
 // 5.1 NAV
 .container {
   max-width: 600px;
+  margin: 0 auto;
+}
+.container--home {
+  margin-top: 30%;
 }
 .header {
   text-align: center;
@@ -321,6 +325,12 @@ p {
 }
 .btn:hover {
   text-decoration: none;
+}
+
+.btn--home {
+  display: block;
+  max-width: 50%;
+  margin: 0 auto;
 }
 .btn-container {
   margin: 2em 0;

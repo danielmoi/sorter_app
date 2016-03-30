@@ -12,29 +12,18 @@
   </head>
   <body>
     <header class="header">
-      <div class="header-container">
-        <div class="header__user">
+      <div class="container">
 
-          <ul class="nav-list nav-list--user-options">
-            <!--  Conditional links -->
-            <% if @current_user.present? %>
-            <li class="nav-list__item nav-list__item--header-users">Logged in as:
-              <%= link_to @current_user.email, user_path(@current_user.id) %></li>
-            <li class="nav-list__item nav-list__item--header-users"><%= link_to 'Edit profile', users_edit_path %></li>
-            <li class="nav-list__item nav-list__item--header-users"><%= link_to 'Log out', login_path, :method => :delete %></li>
-
-          <% else %>
-            <% end %>
-            <!--  End conditional links -->
-          </ul>
-
-        </div>
 
         <h1><%= link_to "Sorter", root_path, :class => 'header-title' %></h1>
+        <% if @current_user.present? %>
+        <p>for <%= @current_user.name %></p>
+        <% end %>
       </div>
 
     </header>
 
+<% if @current_user.present? %>
     <nav class="nav">
       <div class="nav-list">
 
@@ -71,14 +60,14 @@
   <div class="sub-nav">
     <div class="container">
 
-      <% if @current_user.present? %>
       <%= link_to "View profile", user_path(@current_user.id), :class => 'sub-nav__item' %>
       <%= link_to "Edit profile", users_edit_path, :class => 'sub-nav__item' %>
       <%= link_to "Help", help_path, :class => 'sub-nav__item' %>
       <%= link_to "Log out", login_path, :class => 'sub-nav__item', :method => 'delete' %>
-      <% end %>
     </div>
   </div>
+
+  <% end %>
 
   <main class="main">
 
