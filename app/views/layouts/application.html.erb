@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <%= cloudinary_js_config %>
 
-
   </head>
   <body>
     <header class="header">
@@ -25,33 +24,67 @@
             <li class="nav-list__item nav-list__item--header-users"><%= link_to 'Log out', login_path, :method => :delete %></li>
 
           <% else %>
-            <li class="nav-list__item nav-list__item--header-users"><%= link_to 'Sign up', signup_path %></li>
-            <li class="nav-list__item nav-list__item--header-users"><%= link_to 'Log in', login_path %></li>
             <% end %>
             <!--  End conditional links -->
           </ul>
 
         </div>
 
-        <h1>Sorter App 0.1</h1>
-
-        <nav class="nav">
-          <ul class="nav-list">
-            <li class="nav-list__item"><%= link_to "Home", root_path %></li>
-            <li class="nav-list__item"><%= link_to "About", about_path %></li>
-            <li class="nav-list__item"><%= link_to "Help", help_path %></li>
-
-          </ul>
-        </nav>
+        <h1><%= link_to "Sorter", root_path, :class => 'header-title' %></h1>
       </div>
 
     </header>
 
-    <main class="main">
+    <nav class="nav">
+      <div class="nav-list">
 
-      <%= yield %>
+        <a href="<%= read_path %>" class="nav-list__item">
+          <i class="nav-list__icon fa fa-newspaper-o"></i>
+          <i class="nav-list__label">Read</i>
+        </a>
 
-    </main>
+        <a href="<%= favourites_path %>" class="nav-list__item">
+          <i class="nav-list__icon fa fa-heart-o"></i>
+          <i class="nav-list__label">Favourites</i>
+        </a>
 
-  </body>
+        <a href="<%= new_bookmark_path %>" class="nav-list__item">
+          <i class="nav-list__icon fa fa-plus"></i>
+          <i class="nav-list__label">New</i>
+        </a>
+
+        <a href="<%= users_path %>" class="nav-list__item">
+          <i class="nav-list__icon fa fa-globe"></i>
+          <i class="nav-list__label">Explore</i>
+        </a>
+
+        <a href="<%= read_path %>" class="nav-list__item">
+          <i class="nav-list__icon fa fa-bars"></i>
+          <i class="nav-list__label">Menu</i>
+        </a>
+
+
+
+    </div>
+  </nav>
+
+  <div class="sub-nav">
+    <div class="container">
+
+      <% if @current_user.present? %>
+      <%= link_to "View profile", user_path(@current_user.id), :class => 'sub-nav__item' %>
+      <%= link_to "Edit profile", users_edit_path, :class => 'sub-nav__item' %>
+      <%= link_to "Help", help_path, :class => 'sub-nav__item' %>
+      <%= link_to "Log out", login_path, :class => 'sub-nav__item', :method => 'delete' %>
+      <% end %>
+    </div>
+  </div>
+
+  <main class="main">
+
+    <%= yield %>
+
+  </main>
+
+</body>
 </html>

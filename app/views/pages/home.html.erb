@@ -13,30 +13,30 @@
   </h3>
   <% end %>
 
-  
+
   <% if @current_user.present? %>
 
   <p>You are logged in as: <%= @current_user.email %></p>
 
 
   <div class="btn-container">
-    <%= link_to 'New bookmark', new_bookmark_path, :class => 'btn' %>
+    <%= link_to 'New bookmark', new_bookmark_path, :class => 'btn btn--home' %>
   </div>
 
   <div class="btn-container">
-    <%= link_to 'My Bookmarks', bookmarks_path, :class => 'btn' %>
+    <%= link_to 'My Bookmarks', bookmarks_path, :class => 'btn btn--home' %>
   </div>
 
   <div class="btn-container">
-    <%= link_to 'My Categories', categories_path, :class => 'btn' %>
+    <%= link_to 'My Categories', categories_path, :class => 'btn btn--home' %>
   </div>
 
   <div class="btn-container">
-    <%= link_to 'My Reading List', read_path, :class => 'btn' %>
+    <%= link_to 'My Reading List', read_path, :class => 'btn btn--home' %>
   </div>
 
   <div class="btn-container">
-    <%= link_to 'Explore', users_path, :class => 'btn' %>
+    <%= link_to 'Explore', users_path, :class => 'btn btn--home' %>
   </div>
 
 
@@ -46,8 +46,8 @@
 
 <% else %>
   <div>
-    <%= link_to 'Sign up', signup_path, :class => 'btn' %>
-    <%= link_to 'Log in', login_path, :class => 'btn' %>
+    <%= link_to 'Sign up', signup_path, :class => 'btn btn--home' %>
+    <%= link_to 'Log in', login_path, :class => 'btn btn--home' %>
   </div>
   <% end %>
 
