@@ -1,4 +1,7 @@
 class CategoriesController < ApplicationController
+
+  before_action :protect_categories, :only => [:edit, :create, :update, :destroy]
+
   def new
     @category = Category.new
   end
@@ -36,13 +39,20 @@ class CategoriesController < ApplicationController
   def destroy
     category = Category.find params[:id]
     category.destroy
-    redirect_to categories_path    
+    redirect_to categories_path
   end
 
   # helper methods
   private
   def category_params
     params.require(:category).permit(:name)
+  end
+
+  def protect_categories
+    unless Category.find(params[:id]).id == @current_user.id
+      flash[:error] = "Please don't do that to categories"
+      redirect_to root_path
+    end
   end
 
 

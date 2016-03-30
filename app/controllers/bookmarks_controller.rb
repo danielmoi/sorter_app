@@ -1,6 +1,10 @@
 require 'pry'
 
 class BookmarksController < ApplicationController
+
+  before_action :protect_bookmarks, :only => [:edit, :create, :update, :destroy]
+  # the 4 actions that use params[:id]
+
   def index
     if params[:user_id]
       @user = User.find params[:user_id]
@@ -45,11 +49,7 @@ class BookmarksController < ApplicationController
   end
 
   def edit
-    if @user == @current_user
-      @bookmark = Bookmark.find params[:id]
-    else
-      redirect_to bookmarks_path
-    end
+    @bookmark = Bookmark.find params[:id]
   end
 
   def update
@@ -68,6 +68,13 @@ class BookmarksController < ApplicationController
   private
   def bookmark_params
     params.require(:bookmark).permit(:url, :title, :description, :is_favourite, :is_read, :category_ids => [])
+  end
+
+  def protect_bookmarks
+    unless Bookmark.find(params[:id]).id == @current_user.id
+      flash[:error] = "Please don't do that to bookmarks"
+      redirect_to root_path
+    end
   end
 
 end

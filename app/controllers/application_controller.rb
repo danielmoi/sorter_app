@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   # call fetch_user before EVERY ACTION in the entire app
   before_action :fetch_user
 
+
   # private method, that stores the info for the successful login
   private
   def fetch_user

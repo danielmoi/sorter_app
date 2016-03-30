@@ -7,9 +7,17 @@
 
 <section class="main-section">
 
+  <% if flash[:error].present? %>
+  <h3 class="bookmark__error-heading">
+    <%= flash[:error] %>
+  </h3>
+  <% end %>
+
+  
   <% if @current_user.present? %>
 
   <p>You are logged in as: <%= @current_user.email %></p>
+
 
   <div class="btn-container">
     <%= link_to 'New bookmark', new_bookmark_path, :class => 'btn' %>
