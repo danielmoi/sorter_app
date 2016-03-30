@@ -227,11 +227,28 @@ p {
   margin: 2em 0;
 }
 // PROFILE
+.profile__image-container {
+  width: 65%;
+  margin: 0 auto;
+}
 .profile-container {
   text-align: center;
   margin: 2em 0;
 }
+.profile-image {
+  border-radius: 1em;
+}
 
+.user-index__image-container {
+  width: 30%;
+  display: inline-block;
+}
+.user-index__details-container {
+  display: inline-block;
+  width: 65%;
+  vertical-align: top;
+  padding-left: 10px;
+}
 // OTHER
 .login__error-heading,
 .bookmark__error-heading {

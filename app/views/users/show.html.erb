@@ -17,6 +17,8 @@
   <h4>Email</h4>
   <p><%= @user.email %></p>
 
-  <%= image_tag @user.image_url, :class => 'profile-image--large' %>
+  <div class="profile__image-container">
+    <%= image_tag @user.image_url, :class => 'profile-image profile-image--large' %>
+  </div>
 
 </div>

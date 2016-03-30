@@ -5,7 +5,13 @@
   <% User.all.each do |user| %>
   <div class="user-each">
 
-  <p>
+<div class="user-index__image-container">
+  <%= image_tag user.image_url, :class => 'profile-image profile-image--small' %>
+
+</div>
+
+<div class="user-index__details-container">
+  <p class="user-index__name truncate">
     <b>Name: </b>
     <% if user.name %>
       <%= user.name %>
@@ -14,7 +20,7 @@
     <% end %>
   </p>
 
-  <p>
+  <p class="user-index__email truncate">
     <b>Email: </b>
     <%= user.email %>
   </p>
@@ -22,6 +28,10 @@
   <p>
     <b> <%= link_to "All bookmarks", user_bookmarks_path(user.id) %></b>
   </p>
+  
+</div>
+
+
 
   <p>
     <b>By categories: </b>
