@@ -7,6 +7,15 @@
   <% end %>
 </ol>
 <% end %>
+<p>klnlknklnkln</p>
+<!--  Display error from login fail (redirect from login `else`)-->
+<% raise "hell" %>
+<% if flash[:error].present? %>
+<h3 class="bookmark__error-heading">
+  <%= flash[:error] %>
+</h3>
+<% end %>
+
 
 <fieldset>
   <%= f.label :url, "URL: ", :class => 'label' %>

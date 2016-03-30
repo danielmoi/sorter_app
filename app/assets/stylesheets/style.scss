@@ -233,7 +233,8 @@ p {
 }
 
 // OTHER
-.login__error-heading {
+.login__error-heading,
+.bookmark__error-heading {
   text-align: center;
   color: $warning;
 }

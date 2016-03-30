@@ -16,6 +16,13 @@
 </ol>
 <% end %>
 
+<% if flash[:error].present? %>
+<h3 class="bookmark__error-heading">
+  <%= flash[:error] %>
+</h3>
+<% end %>
+
+
 <fieldset>
   <%= f.label :url, "URL: ", :class => 'label' %>
   <%= f.url_field :url, :required => true, :class => 'input' %>

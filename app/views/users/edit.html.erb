@@ -4,12 +4,5 @@
 <div class="main__subheading">
 </div>
 
-<!--  Display error from login fail (redirect from login `else`)-->
-<% if flash[:error].present? %>
-<h3 class="login__error-heading">
-  <%= flash[:error] %>
-</h3>
-<% end %>
-
 
 <%= render :partial => 'form', locals: { :user => @user } %>

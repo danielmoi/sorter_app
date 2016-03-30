@@ -16,6 +16,12 @@ class BookmarksController < ApplicationController
   end
 
   def create
+    if bookmark_params[:category_ids] == [""]
+      flash[:error] = 'Must select a category'
+      @bookmark = Bookmark.new bookmark_params
+      render :new and return
+    end
+
     require 'open-uri'
     @bookmark = Bookmark.new bookmark_params
     @bookmark.user_id = @current_user.id
