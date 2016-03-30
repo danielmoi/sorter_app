@@ -1,3 +1,34 @@
+<script>
+$('document').ready(function() {
+
+var barChartData = {
+  labels : myData.responseJSON.labels,
+  datasets : [
+    {
+      fillColor : "rgba(220,220,220,0.5)",
+      strokeColor : "rgba(220,220,220,0.8)",
+      highlightFill: "rgba(220,220,220,0.75)",
+      highlightStroke: "rgba(220,220,220,1)",
+      data : myData.responseJSON.counts
+      // data : myData.responseJSON.counts
+    },
+  ]
+};
+var ctx = $("#myChart").get(0).getContext("2d");
+
+var myChart = new Chart(ctx).Bar(barChartData, {
+  responsive: true
+});
+// var ctx = $("#myChart").get(0).getContext("2d");
+// var myLineChart = new Chart(ctx).Line(data, {
+//   responsive: true
+// });
+console.log(myData);
+});
+
+</script>
+
+
 <div class="main__heading">
   <h2>Data visualisation</h2>
 </div>
@@ -12,5 +43,5 @@
 
 <div class="graph-container">
   <!-- <svg id="graph"></svg> -->
-  <canvas id="chart1"></canvas>
+  <canvas id="myChart"></canvas>
 </div>
