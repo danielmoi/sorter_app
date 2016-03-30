@@ -7,6 +7,7 @@ $is-read: rgb(46, 204, 113);
 $is-unread: rgb(127, 140, 141);
 $is-fav: rgb(241, 196, 15);
 $is-notfav: rgb(127, 140, 141);
+$red: rgb(192, 57, 43);
 
  ///////////////////////////////////////////////////////////////////////////////
 // 2. GENERIC
@@ -109,6 +110,10 @@ p {
 * {
   box-sizing: border-box;
 }
+
+body {
+  background-image: url('background.jpg');
+}
 // 5. SECTIONS
 // 5.1 NAV
 .container {
@@ -121,6 +126,11 @@ p {
 .header {
   text-align: center;
   background: rgb(236, 240, 241);
+  border-bottom: 1px solid $red;
+}
+.sub-header {
+  height: 2px;
+  border-bottom: 1px solid $red;
 }
 .header-container {
   max-width: 600px;
