@@ -83,7 +83,7 @@ img {
   border: 0;
 }
 
-button, textarea {
+input[type="button"], input[type="submit"], input[type="url"], button, textarea {
   -webkit-appearance: none; /*Safari/Chrome*/
  -moz-appearance: none; /*Firefox*/
  -ms-appearance: none; /*IE*/
