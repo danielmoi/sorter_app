@@ -7,7 +7,7 @@
     <% if @current_user.id == @bookmark.user_id %>
     <p>This bookmark belongs to <%= link_to "me", user_bookmarks_path(@bookmark.user_id), :class => 'link-underline' %></p>
     <% else %>
-    <p>This bookmark belongs to <%= link_to @bookmark.user.name, user_bookmarks_path(@bookmark.user), :class => 'link-underline' %></p>
+    <p>This bookmark belongs to <%= link_to User.find(@bookmark.user_id).name, user_bookmarks_path(@bookmark.user_id), :class => 'link-underline' %></p>
     <% end %>
   </div>
 
