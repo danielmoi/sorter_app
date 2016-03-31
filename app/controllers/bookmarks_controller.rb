@@ -1,5 +1,3 @@
-require 'pry'
-
 class BookmarksController < ApplicationController
 
   before_action :protect_bookmarks, :only => [:edit, :create, :update, :destroy]
