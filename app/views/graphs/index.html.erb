@@ -1,27 +1,32 @@
 <script>
-  $('document').ready(function () {
+  var displayGraph;
+  $(document).ready(function () {
+
+
     console.log('document ready');
+    displayGraph = function (data) {
+      console.log( data );
+      Chart.defaults.global.responsive = true;
+      Chart.defaults.global.tooltipFillColor = 'rgb(44, 62, 80)';
 
-    Chart.defaults.global.responsive = true;
-    Chart.defaults.global.tooltipFillColor = 'rgb(44, 62, 80)';
+      var barChartData = {
+        labels: data.labels,
+        datasets: [
+          {
+            // fillColor : "rgba(44, 62, 80, 1);",
+            fillColor: "rgb(122, 151, 190)",
+            strokeColor: "rgba(122, 151, 190, 0.1)",
+            // strokeColor : "red", highlightFill: "rgba(220,220,220,0.75)", highlightStroke: "rgba(220,220,220,1)",
+            data: data.counts
+            // data : myData.responseJSON.counts
+          }
+        ]
+      };
+      var ctx = $("#myChart").get(0).getContext("2d");
 
-    var barChartData = {
-      labels: myData.responseJSON.labels,
-      datasets: [
-        {
-          // fillColor : "rgba(44, 62, 80, 1);",
-          fillColor: "rgb(122, 151, 190)",
-          strokeColor: "rgba(122, 151, 190, 0.1)",
-          // strokeColor : "red", highlightFill: "rgba(220,220,220,0.75)", highlightStroke: "rgba(220,220,220,1)",
-          data: myData.responseJSON.counts
-          // data : myData.responseJSON.counts
-        }
-      ]
-    };
-    var ctx = $("#myChart").get(0).getContext("2d");
-
-    var myChart = new Chart(ctx).Bar(barChartData, {responsive: true});
-
+      var myChart = new Chart(ctx).Bar(barChartData, {responsive: true});
+    }
+    requestInfo();
   });
 </script>
 
