@@ -24,7 +24,7 @@
   <h3><%= category.name %></h3>
 
     <ul>
-      <% category.bookmarks.each do |bookmark| %>
+      <% category.bookmarks.reverseeach do |bookmark| %>
         <%= render :partial => 'magic', locals: { :bookmark => bookmark } %>
       <% end %>
   </ul>
