@@ -2,7 +2,7 @@
   <% if @user == @current_user %>
     <h2>My bookmarks</h2>
   <% else %>
-    <h2>Bookmarks for <%= @user.email %></h2>
+    <h2>Bookmarks for <%= @user.name %></h2>
   <% end %>
 </div>
 
@@ -15,9 +15,11 @@
   <% end %>
 </div>
 
+<% if params[:id] == @current_user.id %>
 <div class="btn-container">
   <%= link_to 'New bookmark', new_bookmark_path, :class => 'btn' %>
 </div>
+<% end %>
 
 <% @user.categories.each do |category| %>
 
