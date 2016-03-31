@@ -14,7 +14,9 @@ class BookmarksController < ApplicationController
 
   def new
     @bookmark = Bookmark.new
-    if @current_user.categories.nil?
+
+    # Not sure why some users don't have @current_user
+    if @current_user.categories.empty?
       @current_user.categories.create :name => "Uncategorised"
     end
     @bookmark.categories << @current_user.categories.first
