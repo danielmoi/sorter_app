@@ -7,7 +7,7 @@
     <% if @current_user.id == @bookmark.user_id %>
     <p>This bookmark belongs to <%= link_to "me", user_bookmarks_path(@bookmark.user_id), :class => 'link-underline' %></p>
     <% else %>
-    <p>This bookmark belongs to <%= link_to User.find(@bookmark.user_id).email, user_bookmarks_path(@bookmark.user_id), :class => 'link-underline' %></p>
+    <p>This bookmark belongs to <%= link_to @bookmark.user.name, user_bookmarks_path(@bookmark.user), :class => 'link-underline' %></p>
     <% end %>
   </div>
 
@@ -24,7 +24,7 @@
 
   <h4>Date created</h4>
   <p class="bookmark-created">
-  <i class="bookmark-timestamp"><%= @bookmark.created_at %></i>
+  <i class="bookmark-timestamp"><%= (@bookmark.created_at).strftime('%Y%m%d') %></i>
 </p>
 
 <h4>Categories</h4>
