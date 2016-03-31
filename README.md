@@ -1,29 +1,38 @@
-== README
+# Sorter
 
+Sorter is a web application for sorting and storing your bookmarks from the internet.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Features
+1. When creating a bookmark, Sorter will automatically search for the title and description from the URL
+2. Custom categories for you to sort your bookmarks
+3. Favourites – tag your favourite bookmarks
+4. Reading list – browse the bookmarks that you haven't read
+5. Explore – browse bookmarks and categories of other users
+6. Stats – keep track of how many bookmarks you have – sorted by category
 
-Things you may want to cover:
+### Technical details
+- Ruby version 2.3.0
+- Rails 4.2.6
+- Postgres 9.5.1
 
-* Ruby version
+### Gems
+- pg (for Postgresql)
+- cloudinary (for file upload)
+- rails_12factor (for production)
 
-* System dependencies
+### Libraries / other resources
+- ChartJS (for graphs)
+- Fontawesome
 
-* Configuration
+### Usage
+1. Clone repo from https://github.com/danielmoi/sorter_app
+2. Run `bundle` to install Gems
+3. Run `rake db:migrate` and `rake db:seed` to populate database
+4. Run `rails server` and navigate to `localhost:3000`
 
-* Database creation
+Alternatively, visit https://sorter-4000.herokuapp.com and login to Sorter now!
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+### Support
+- Raise an issue here: https://github.com/danielmoi/sorter_app/issues
+- Submit a pull request
+- Email me at daniel@ampersandmoi.com 
