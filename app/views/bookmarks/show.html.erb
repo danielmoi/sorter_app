@@ -1,28 +1,29 @@
-<div class="main__heading">
-  <h2><%= @bookmark.title %></h2>
-</div>
+<div class="bookmark-single__container">
+  <div class="main__heading">
+    <h2><%= @bookmark.title %></h2>
+  </div>
 
-<div class="main__subheading">
-  <% if @current_user.id == @bookmark.user_id %>
-  <p>This bookmark belongs to <%= link_to "me", user_bookmarks_path(@bookmark.user_id), :class => 'link-underline' %></p>
-  <% else %>
-  <p>This bookmark belongs to <%= link_to User.find(@bookmark.user_id).email, user_bookmarks_path(@bookmark.user_id), :class => 'link-underline' %></p>
-  <% end %>
-</div>
+  <div class="main__subheading">
+    <% if @current_user.id == @bookmark.user_id %>
+    <p>This bookmark belongs to <%= link_to "me", user_bookmarks_path(@bookmark.user_id), :class => 'link-underline' %></p>
+    <% else %>
+    <p>This bookmark belongs to <%= link_to User.find(@bookmark.user_id).email, user_bookmarks_path(@bookmark.user_id), :class => 'link-underline' %></p>
+    <% end %>
+  </div>
 
-<h4>URL</h4>
-<p class="truncate">
-  <%= link_to @bookmark.url, @bookmark.url, :class => 'bookmark-link' %>
-</p>
+  <h4>URL</h4>
+  <p class="truncate">
+    <%= link_to @bookmark.url, @bookmark.url, :class => 'bookmark-link' %>
+  </p>
 
-<h4>Description</h4>
-<p><%= @bookmark.description %></p>
+  <h4>Description</h4>
+  <p><%= @bookmark.description %></p>
 
-<h4>Notes</h4>
-<p><%= @bookmark.notes %></p>
+  <h4>Notes</h4>
+  <p><%= @bookmark.notes %></p>
 
-<h4>Date created</h4>
-<p class="bookmark-created">
+  <h4>Date created</h4>
+  <p class="bookmark-created">
   <i class="bookmark-timestamp"><%= @bookmark.created_at %></i>
 </p>
 
@@ -59,3 +60,4 @@
   <%= link_to " Delete", bookmark_path(@bookmark.id), :method => 'delete', :class => 'bookmark-trash fa fa-trash' %>
 </p>
 <% end %>
+</div>

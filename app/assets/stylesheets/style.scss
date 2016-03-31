@@ -271,7 +271,15 @@ body {
   // background-image: url('note.jpg');
   box-shadow: 1px 1px 5px;
 }
-
+.bookmark-single__container {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 1px 1px 5px;
+  padding: 1em;
+  @media screen and (min-width: 600px) {
+    padding: 2em;
+    margin-top: 50px;
+  }
+}
 .bookmark__details {
   display: inline-block;
   width: 70%;
