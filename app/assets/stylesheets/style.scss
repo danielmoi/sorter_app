@@ -123,6 +123,9 @@ body {
 // 5.1 NAV
 body {
   margin-bottom: 100px;
+  @media screen and (min-width: 600px) {
+    margin-bottom: 150px;
+  }
 }
 .container {
   max-width: 600px;
@@ -131,19 +134,21 @@ body {
 .container--home {
   margin-top: 30%;
 }
-.header-title {
+.header__title-container {
+  padding-bottom: 0;
+}
+.header__title {
   font-family: "Architects Daughter", Helvetica,  sans-serif;
 }
-
 
 .header {
   text-align: center;
   // background: rgb(236, 240, 241);
-  border-bottom: 1px solid $red;
+  border-bottom: 1px solid $primary;
 }
 .sub-header {
   height: 2px;
-  border-bottom: 1px solid $red;
+  border-bottom: 1px solid $primary;
 }
 .header-container {
   max-width: 600px;
@@ -233,10 +238,6 @@ body {
   }
 }
 
-.header__user {
-  text-align: right;
-  font-size: 0.9em;
-}
 // 5.2 MAIN
 .main {
   max-width: 600px;
@@ -263,11 +264,12 @@ body {
 .user-each {
   margin: 1em 0;
   padding: 1em;
-  border: 1px solid $primary;
-  border-radius: 10px;
+  // border: 1px solid $primary;
+  // border-radius: 10px;
   position: relative;
   background-color: rgba(255, 255, 255, 0.4);
   // background-image: url('note.jpg');
+  box-shadow: 1px 1px 5px;
 }
 
 .bookmark__details {
@@ -299,10 +301,17 @@ body {
 }
 .bookmark-created {
   font-size: 0.8em;
+  @media screen and (min-width: 600px) {
+    font-size: 0.9em;
+  }
 }
 .bookmark-fav.fa,
 .bookmark-read.fa {
-  font-size: 1.8em;
+  font-size: 1em;
+  margin-right: 5px;
+  @media screen and (min-width: 600px) {
+    font-size: 1.1em;
+  }
 }
 
 .bookmark-read--is-read {

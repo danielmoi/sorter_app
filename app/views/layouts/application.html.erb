@@ -16,7 +16,7 @@
       <div class="container">
 
 
-        <h1><%= link_to "SORTER", root_path, :class => 'header-title' %></h1>
+        <h1 class="header__title-container"><%= link_to "SORTER", root_path, :class => 'header__title' %></h1>
         <% if @current_user.present? %>
         <p>for <%= @current_user.name %></p>
         <% end %>
