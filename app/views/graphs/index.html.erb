@@ -1,47 +1,40 @@
 <script>
-$('document').ready(function() {
+  $('document').ready(function () {
+    console.log('document ready');
 
-var barChartData = {
-  labels : myData.responseJSON.labels,
-  datasets : [
-    {
-      fillColor : "rgba(220,220,220,0.5)",
-      strokeColor : "rgba(220,220,220,0.8)",
-      highlightFill: "rgba(220,220,220,0.75)",
-      highlightStroke: "rgba(220,220,220,1)",
-      data : myData.responseJSON.counts
-      // data : myData.responseJSON.counts
-    },
-  ]
-};
-var ctx = $("#myChart").get(0).getContext("2d");
+    Chart.defaults.global.responsive = true;
+    Chart.defaults.global.tooltipFillColor = 'rgb(44, 62, 80)';
 
-var myChart = new Chart(ctx).Bar(barChartData, {
-  responsive: true
-});
-// var ctx = $("#myChart").get(0).getContext("2d");
-// var myLineChart = new Chart(ctx).Line(data, {
-//   responsive: true
-// });
-console.log(myData);
-});
+    var barChartData = {
+      labels: myData.responseJSON.labels,
+      datasets: [
+        {
+          // fillColor : "rgba(44, 62, 80, 1);",
+          fillColor: "rgb(122, 151, 190)",
+          strokeColor: "rgba(122, 151, 190, 0.1)",
+          // strokeColor : "red", highlightFill: "rgba(220,220,220,0.75)", highlightStroke: "rgba(220,220,220,1)",
+          data: myData.responseJSON.counts
+          // data : myData.responseJSON.counts
+        }
+      ]
+    };
+    var ctx = $("#myChart").get(0).getContext("2d");
 
+    var myChart = new Chart(ctx).Bar(barChartData, {responsive: true});
+
+  });
 </script>
 
-
 <div class="main__heading">
-  <h2>Data visualisation</h2>
+  <h2>Stats <i class="fa fa-bar-chart"></i></h2>
 </div>
 
 <div class="main__subheading">
-  <h4>
-    Some graphs...
-  </h4>
-
-
 </div>
 
 <div class="graph-container">
+  <h4 class="graph-title">My bookmark counts</h4>
   <!-- <svg id="graph"></svg> -->
   <canvas id="myChart"></canvas>
+  <p class="text-center">Total number of bookmarks: <%= @bookmark_total %></p>
 </div>

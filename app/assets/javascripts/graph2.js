@@ -1,12 +1,13 @@
 var myData = $.ajax({
   method: 'GET',
-  url: 'graphs/data2',
+  url: 'graphs/data_current_user',
   dataType: 'json',
   success: function(data) {
     console.log(data);
-    console.log("HELLO");
+    console.log("ajax success");
   },
   error: function(error) {
+    console.log("ajax error");
 
   }
 });

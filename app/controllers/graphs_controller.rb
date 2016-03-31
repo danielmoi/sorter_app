@@ -1,5 +1,6 @@
 class GraphsController < ApplicationController
   def index
+    @bookmark_total = @current_user.bookmarks.size
   end
 
   def data
@@ -29,6 +30,22 @@ class GraphsController < ApplicationController
     respond_to do |format|
       format.json {
         render :json => my_data
+      }
+    end
+  end
+
+  def data_current_user
+    categories = {
+      :labels => [],
+      :counts => []
+    }
+    @current_user.categories.each do |c|
+      categories[:labels] << c.name
+      categories[:counts] << c.bookmarks.size
+    end
+    respond_to do |format|
+      format.json {
+        render :json => categories
       }
     end
   end

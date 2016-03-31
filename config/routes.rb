@@ -42,6 +42,7 @@ Rails.application.routes.draw do
   get '/graphs' => 'graphs#index'
   get '/graphs/data', :defaults => { :format => 'json' }
   get '/graphs/data2', :defaults => { :format => 'json' }
+  get '/graphs/data_current_user', :defaults => { :format => 'json' }
 
 
 end
