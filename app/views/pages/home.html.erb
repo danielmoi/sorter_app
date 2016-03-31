@@ -19,7 +19,7 @@
 
 <% else %>
 
-  <h2 class="greeting">Hello,</h2>
+  <h2 class="greeting"><%= @greeting %>,</h2>
     <h3><%= @current_user.name %>!</h3>
 
   <div class="home-new__container">
@@ -32,17 +32,7 @@
     </div>
   </div>
 
-  <script>
 
-    var welcome_arr = [ "Mirëdita",  "Ahalan", "Parev", "Zdravei", "Nei Ho", "Dobrý", "Goddag", "Goede", "Hello", "Saluton", "Hei", "Bonjour", "Guten Tag", "Gia'sou", "Aloha", "Shalom", "Namaste", "Jó napot", "Góðan daginn", "Halo", "Qanuipit?", "Dia dhuit", "Ciao", "Kon-nichiwa", "An-nyong Ha-se-yo", "Salve", "Ni hao", "Hallo", "Dzien' dobry", "Olá", "Bunã ziua", "Zdravstvuyte", "Hola", "Jambo", "Hej", "Sa-wat-dee", "Merhaba", "Vitayu", "Xin chào", "Sut Mae?", "Sholem Aleychem", "Sawubona" ];
-
-    var changeGreeting = function() {
-      var random = Math.floor(Math.random() * 42);
-      $('h2').text(welcome_arr[random] +',');
-    };
-    var intervalID = setInterval(changeGreeting, 5000);
-
-  </script>
 
   <% end %>
 
