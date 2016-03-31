@@ -159,18 +159,21 @@ body {
   z-index: 100;
   height: 50px;
   background: $primary;
+  @media screen and (min-width: 600px) {
+    height: 70px;
+  }
 
 }
 
 .nav-list {
-  padding: 10px 0 0;
+  padding: 10px 0 0 0;
   max-width: 600px;
   margin: 0 auto;
   color: #fff;
   text-align: center;
-}
-.nav-list--user-options {
-  display:  none;
+  @media screen and (min-width: 600px) {
+    padding: 20px 0 0 0;
+  }
 }
 
 .nav-list__item {
@@ -209,6 +212,7 @@ body {
   z-index: 100;
   @media screen and (min-width: 600px) {
     display: block;
+    bottom: 70px;
   }
 }
 
