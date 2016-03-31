@@ -43,13 +43,27 @@ Bookmark.create!([
   {url: "http://fontawesome.io/icons/", title: "Font Awesome", description: "", is_favourite: true, is_unread: true, user_id: 12, is_read: false, notes: nil},
   {url: "http://javascript.com", title: "Javascript", description: "", is_favourite: true, is_unread: true, user_id: 12, is_read: false, notes: nil},
   {url: "http://google.com", title: "", description: "", is_favourite: false, is_unread: true, user_id: 12, is_read: false, notes: nil},
-  {url: "http://google.com", title: "Google", description: "lkj", is_favourite: false, is_unread: true, user_id: 12, is_read: false, notes: nil},
   {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "Chapter 4: Rails-flavored Ruby\n | Ruby on Rails Tutorial (3rd Ed.) |  Softcover.io", description: "", is_favourite: false, is_unread: true, user_id: 12, is_read: true, notes: nil},
   {url: "http://jaydenseric.com/blog/how-to-write-smarter-css-animations", title: "Jayden Seric | How to write smarter CSS animations", description: "", is_favourite: false, is_unread: true, user_id: 12, is_read: false, notes: nil},
   {url: "http://jaydenseric.com/blog/how-to-write-smarter-css-animations", title: "Jayden Seric | How to write smarter CSS animations", description: "There are several tricks to writing efficient CSS animations that few people seem aware of. You can omit start or end frames for greater versatility with less code, combine similar frames, combine animations to reduce keyframes declarations, reverse animations to avoid separate \"In\" and \"Out\" keyframes and use negative delays to run only portions of animations.", is_favourite: true, is_unread: true, user_id: 12, is_read: true, notes: nil},
   {url: "https://css-tricks.com", title: "CSS-Tricks", description: "Tips, Tricks, and Techniques on using Cascading Style Sheets.", is_favourite: false, is_unread: true, user_id: 12, is_read: false, notes: nil},
   {url: "http://google.com", title: "Google", description: "", is_favourite: false, is_unread: true, user_id: 12, is_read: false, notes: nil},
-  {url: "http://www.sitepoint.com/nokogiri-fundamentals-extract-html-web/", title: "Nokogiri Fundamentals: Extract HTML from the Web", description: "Darko Gjorgjievski shows your the right way to learn Nokogiri to extract data from the web. Scrape HTML like a pro without all the headaches of learning.", is_favourite: true, is_unread: true, user_id: 12, is_read: false, notes: nil}
+  {url: "http://www.sitepoint.com/nokogiri-fundamentals-extract-html-web/", title: "Nokogiri Fundamentals: Extract HTML from the Web", description: "Darko Gjorgjievski shows your the right way to learn Nokogiri to extract data from the web. Scrape HTML like a pro without all the headaches of learning.", is_favourite: true, is_unread: true, user_id: 12, is_read: false, notes: nil},
+  {url: "http://google.com", title: "Google", description: nil, is_favourite: true, is_unread: true, user_id: 21, is_read: false, notes: nil},
+  {url: "http://apidock.com/rails/ActionView/Helpers/FormBuilder/check_box", title: "check_box (ActionView::Helpers::FormBuilder) - APIdock", description: nil, is_favourite: false, is_unread: true, user_id: 21, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "Chapter 4: Rails-flavored Ruby\n | Ruby on Rails Tutorial (3rd Ed.) |  Softcover.io", description: nil, is_favourite: false, is_unread: true, user_id: 22, is_read: false, notes: nil},
+  {url: "http://jaydenseric.com/blog/how-to-write-smarter-css-animations", title: "Jayden Seric | How to write smarter CSS animations", description: "There are several tricks to writing efficient CSS animations that few people seem aware of. You can omit start or end frames for greater versatility with less code, combine similar frames, combine animations to reduce keyframes declarations, reverse animations to avoid separate \"In\" and \"Out\" keyframes and use negative delays to run only portions of animations.", is_favourite: false, is_unread: true, user_id: 26, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "Chapter 4: Rails-flavored Ruby\n | Ruby on Rails Tutorial (3rd Ed.) |  Softcover.io", description: nil, is_favourite: false, is_unread: true, user_id: 26, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "Chapter 4: Rails-flavored Ruby\n | Ruby on Rails Tutorial (3rd Ed.) |  Softcover.io", description: nil, is_favourite: false, is_unread: true, user_id: 26, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "Chapter 4: Rails-flavored Ruby\n | Ruby on Rails Tutorial (3rd Ed.) |  Softcover.io", description: nil, is_favourite: false, is_unread: true, user_id: 26, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "Chapter 4: Rails-flavored Ruby\n | Ruby on Rails Tutorial (3rd Ed.) |  Softcover.io", description: nil, is_favourite: false, is_unread: true, user_id: 26, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "Chapter 4: Rails-flavored Ruby\n | Ruby on Rails Tutorial (3rd Ed.) |  Softcover.io", description: nil, is_favourite: false, is_unread: true, user_id: 26, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "Chapter 4: Rails-flavored Ruby\n | Ruby on Rails Tutorial (3rd Ed.) |  Softcover.io", description: nil, is_favourite: false, is_unread: true, user_id: 26, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "Chapter 4: Rails-flavored Ruby\n | Ruby on Rails Tutorial (3rd Ed.) |  Softcover.io", description: nil, is_favourite: false, is_unread: true, user_id: 26, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "Chapter 4: Rails-flavored Ruby\n | Ruby on Rails Tutorial (3rd Ed.) |  Softcover.io", description: nil, is_favourite: false, is_unread: true, user_id: 26, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "Chapter 4: Rails-flavored Ruby\n | Ruby on Rails Tutorial (3rd Ed.) |  Softcover.io", description: nil, is_favourite: false, is_unread: true, user_id: 26, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "Chapter 4: Rails-flavored Ruby\n | Ruby on Rails Tutorial (3rd Ed.) |  Softcover.io", description: nil, is_favourite: false, is_unread: true, user_id: 26, is_read: false, notes: nil},
+  {url: "https://www.railstutorial.org/book/rails_flavored_ruby", title: "Chapter 4: Rails-flavored Ruby\n | Ruby on Rails Tutorial (3rd Ed.) |  Softcover.io", description: nil, is_favourite: false, is_unread: true, user_id: 26, is_read: false, notes: nil}
 ])
 Bookmark::HABTM_Categories.create!([
   {bookmark_id: 19, category_id: 11},
@@ -70,13 +84,18 @@ Bookmark::HABTM_Categories.create!([
   {bookmark_id: 68, category_id: 19},
   {bookmark_id: 69, category_id: 20},
   {bookmark_id: 70, category_id: 19},
-  {bookmark_id: 71, category_id: 19},
   {bookmark_id: 72, category_id: 19},
   {bookmark_id: 73, category_id: 19},
   {bookmark_id: 74, category_id: 19},
   {bookmark_id: 75, category_id: 19},
   {bookmark_id: 76, category_id: 19},
-  {bookmark_id: 77, category_id: 19}
+  {bookmark_id: 77, category_id: 19},
+  {bookmark_id: 79, category_id: 21},
+  {bookmark_id: 82, category_id: 23},
+  {bookmark_id: 82, category_id: 24},
+  {bookmark_id: 84, category_id: 24},
+  {bookmark_id: 89, category_id: 24},
+  {bookmark_id: 92, category_id: 23}
 ])
 Category.create!([
   {name: "ruby", user_id: 9},
@@ -85,7 +104,17 @@ Category.create!([
   {name: "css", user_id: 10},
   {name: "HTML", user_id: 9},
   {name: "HTML", user_id: 12},
-  {name: "JavaScript", user_id: 12}
+  {name: "JavaScript", user_id: 12},
+  {name: "HTML", user_id: 21},
+  {name: "Uncategorised", user_id: 25},
+  {name: "Uncategorised", user_id: 26},
+  {name: "Scala", user_id: 26},
+  {name: "Uncategorised", user_id: 29},
+  {name: "Uncategorised", user_id: 30},
+  {name: "Uncategorised", user_id: 31},
+  {name: "Uncategorised", user_id: 32},
+  {name: "Uncategorised", user_id: 33},
+  {name: "Uncategorised", user_id: 34}
 ])
 Category::HABTM_Bookmarks.create!([
   {bookmark_id: 19, category_id: 11},
@@ -106,26 +135,47 @@ Category::HABTM_Bookmarks.create!([
   {bookmark_id: 68, category_id: 19},
   {bookmark_id: 69, category_id: 20},
   {bookmark_id: 70, category_id: 19},
-  {bookmark_id: 71, category_id: 19},
   {bookmark_id: 72, category_id: 19},
   {bookmark_id: 73, category_id: 19},
   {bookmark_id: 74, category_id: 19},
   {bookmark_id: 75, category_id: 19},
   {bookmark_id: 76, category_id: 19},
-  {bookmark_id: 77, category_id: 19}
+  {bookmark_id: 77, category_id: 19},
+  {bookmark_id: 79, category_id: 21},
+  {bookmark_id: 82, category_id: 23},
+  {bookmark_id: 82, category_id: 24},
+  {bookmark_id: 84, category_id: 24},
+  {bookmark_id: 89, category_id: 24},
+  {bookmark_id: 92, category_id: 23}
 ])
 Favourite.create!([
   {user_id: 10, bookmark_id: nil, is_favourite: nil}
 ])
 User.create!([
-  {name: nil, email: "you@me.com", password_digest: "$2a$10$MX0mGCgsYF4dqqIDGLvGmuka9DYxjo4lJGjNXXpAdqEKV556U.Vt2"},
-  {name: nil, email: "hello@hello.com", password_digest: "$2a$10$zRsQJQhnOeab63MsEfE/UOFcuN9ju/dYsjpzVktUshQoG6oR6ynv."},
-  {name: nil, email: "red@red.com", password_digest: "$2a$10$iMEKmRNY4aomm2WXAWfcFu007b1vvv7WHu1JTWbWBSz7rcumDU7wy"},
-  {name: nil, email: "red@red.com", password_digest: "$2a$10$OBqiFEsDNyO4X/RVzxopo.spoa6Ltax79JQvDOKXYvrKHbdM9NJPS"},
-  {name: nil, email: "green@green.com", password_digest: "$2a$10$V6r/42Vdf81CSoDqyM4BKehcfzGRzDSEVVrOFh0ENVyhDSVH4XdfW"},
-  {name: nil, email: "blue@blue.com", password_digest: "$2a$10$e2slAPDg.Dij0.T/..klpuSlwN.k7vsQWmgKpLoWISkAOiA9x81Wm"},
-  {name: nil, email: "blue@blue.com", password_digest: "$2a$10$f.6EyftfWGzJPJiJIrK13eE2i9m84TzaRcV87g0iQZXnLQ0NmBfK2"},
-  {name: nil, email: "blue@blue.com", password_digest: "$2a$10$.Krac/suE.Gy7Yr51s3JleZ93ROLZk56l7nEyq5C/xpj5FDa25cki"},
-  {name: nil, email: "blue@blue.com", password_digest: "$2a$10$ToYSPXGSNOenvxNc5sH0AevGkGqDTJh8WljJ18u79G156BnBmOWHu"},
-  {name: nil, email: "me@me.com", password_digest: "$2a$10$rZBx8A0JH2J0CytcHWRdVOMesJDGZfj9IqddeUp/RWuKqvUkhoUme"}
+  {name: nil, email: "you@me.com", password_digest: "$2a$10$MX0mGCgsYF4dqqIDGLvGmuka9DYxjo4lJGjNXXpAdqEKV556U.Vt2", image_url: nil},
+  {name: nil, email: "hello@hello.com", password_digest: "$2a$10$zRsQJQhnOeab63MsEfE/UOFcuN9ju/dYsjpzVktUshQoG6oR6ynv.", image_url: nil},
+  {name: nil, email: "red@red.com", password_digest: "$2a$10$iMEKmRNY4aomm2WXAWfcFu007b1vvv7WHu1JTWbWBSz7rcumDU7wy", image_url: nil},
+  {name: nil, email: "red@red.com", password_digest: "$2a$10$OBqiFEsDNyO4X/RVzxopo.spoa6Ltax79JQvDOKXYvrKHbdM9NJPS", image_url: nil},
+  {name: nil, email: "green@green.com", password_digest: "$2a$10$V6r/42Vdf81CSoDqyM4BKehcfzGRzDSEVVrOFh0ENVyhDSVH4XdfW", image_url: nil},
+  {name: nil, email: "blue@blue.com", password_digest: "$2a$10$e2slAPDg.Dij0.T/..klpuSlwN.k7vsQWmgKpLoWISkAOiA9x81Wm", image_url: nil},
+  {name: nil, email: "blue@blue.com", password_digest: "$2a$10$f.6EyftfWGzJPJiJIrK13eE2i9m84TzaRcV87g0iQZXnLQ0NmBfK2", image_url: nil},
+  {name: nil, email: "blue@blue.com", password_digest: "$2a$10$.Krac/suE.Gy7Yr51s3JleZ93ROLZk56l7nEyq5C/xpj5FDa25cki", image_url: nil},
+  {name: nil, email: "blue@blue.com", password_digest: "$2a$10$ToYSPXGSNOenvxNc5sH0AevGkGqDTJh8WljJ18u79G156BnBmOWHu", image_url: nil},
+  {name: nil, email: "wed@wed.com", password_digest: "$2a$10$CuHT5ezJ1wYhZK1SO.mQ5OMwEplrxcijPf1cVz28WuHoWdgjTKQja", image_url: nil},
+  {name: nil, email: "wed2@wed2.com", password_digest: "$2a$10$1FG.sjSdb5EFACoJRXVTv.Sa2QIt.iqQVQoqzwZFh3fOwSLltLbh2", image_url: nil},
+  {name: nil, email: "wed3@wed3.com", password_digest: "$2a$10$vhIcRXiUBFFBsNJfoqyheOtnVT6c9TpeClcBCyYqqEjJDNobVY1Gq", image_url: nil},
+  {name: nil, email: "wed5@wed5.com", password_digest: "$2a$10$A43iEqMp20MYpNtIU1ZEneaOKI2BLXAHtNjW37Gljh0PT5LQH8bxi", image_url: nil},
+  {name: nil, email: "wed6@wed6.com", password_digest: "$2a$10$fvptvXmVCU8SKZ8ttzMZt.gBhr7jSr8C88AbF6WUSAbQlD2VP53/W", image_url: nil},
+  {name: nil, email: "wed7@wed7.com", password_digest: "$2a$10$tEAVpyFpcDxjtl3jukDrieYEraCvwFPIxEvF/K5kEIW011kny35qy", image_url: nil},
+  {name: nil, email: "wed8@wed8.com", password_digest: "$2a$10$fnUOj1yAjXpLnd6XusltwOqNwn6bYGatlB6LGZbzxLFVYOGOziiPS", image_url: nil},
+  {name: "panda", email: "wed9@wed9.com", password_digest: "$2a$10$/HlT5ExhTgn84fEbhDdrc.agP6CjTcOvUkmwwmZuZS6ZeLyZceGLa", image_url: "#<ActionDispatch::Http::UploadedFile:0x007fc64c0f2548>"},
+  {name: "wed10", email: "wed10@wed10.com", password_digest: "$2a$10$C1h7jBYHhlk0GTLeGxzOqOW4wNoPVg2.ORwO6asvEh9k2rQlS.L5q", image_url: "#<ActionDispatch::Http::UploadedFile:0x007fc6424f4ad8>"},
+  {name: "wed10", email: "wed10@wed10.com", password_digest: "$2a$10$zdTV.3FQDABZTzBMs.GA0u3ktj6tz/fw2LKzgxmnFfGH1UMj7pjeG", image_url: "#<ActionDispatch::Http::UploadedFile:0x007fc64a3d26c0>"},
+  {name: "wed11", email: "wed10@wed10.com", password_digest: "$2a$10$FHZr7DPaA4tdSs.ATLPuku.lgbGLp2rG.jo0IOFxRQDrn14FiKtCG", image_url: "http://res.cloudinary.com/drbiqekyx/image/upload/v1459316347/qklxxm9hrnkg4xjfngci.jpg"},
+  {name: "Murakami", email: "wed11@wed11.com", password_digest: "$2a$10$q1Sgo1PWFMWZVIs9u2HBWOiMEUqfXhwtxzP7B9RRrZF2Gg29B7lLa", image_url: nil},
+  {name: "", email: "wed12@wed12.com", password_digest: "$2a$10$xhWvLausbsw3Wu6mkjBvfOMQGiCd.RcCQmJBhlHZysCEymWRBJDam", image_url: nil},
+  {name: "     ", email: "wed13@wed13.com", password_digest: "$2a$10$MB/TCpEofqB6t2ccRDb2YufQLdR3wG6YGcy8/YhxPCrW0.znIWvQy", image_url: nil},
+  {name: "Murakami", email: "wed14@wed14.com", password_digest: "$2a$10$1eskTuTNAvTftkI9YpIrTedx2X.oeIax/h5uMCD/WTdO4OjpgbLjS", image_url: nil},
+  {name: "Murakami 2", email: "me@me.com", password_digest: "$2a$10$CL.TcaiKmZMV/TaBzWaZmOhPq/97EETqpKGiGVYm3IHfXp7bYs/NK", image_url: "http://res.cloudinary.com/drbiqekyx/image/upload/v1459387659/yz8edeldp1iysad6dbtr.jpg"},
+  {name: "Murakami 3", email: "me@me.com", password_digest: "$2a$10$w03puY2QUXMtRVcpblsTYOuzARCsgJGofwkgjJL8IMdazv1yuRiw2", image_url: nil}
 ])
