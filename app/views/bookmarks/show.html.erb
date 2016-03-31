@@ -24,7 +24,9 @@
 
   <h4>Date created</h4>
   <p class="bookmark-created">
-  <i class="bookmark-timestamp"><%= (@bookmark.created_at).strftime('%Y%m%d') %></i>
+
+    <% y = distance_of_time_in_words_to_now(@bookmark.created_at) %>
+    <i class="bookmark-timestamp"><%= @bookmark.created_at %> (<%= y %> ago) </i>
 </p>
 
 <h4>Categories</h4>

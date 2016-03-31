@@ -18,7 +18,13 @@
       <i class="bookmark-read bookmark-read--is-unread fa fa-square-o"></i>
     <% end %>
 
-    <i class="bookmark-timestamp"><%= bookmark.created_at %></i>
+
+
+    <% y = distance_of_time_in_words_to_now(bookmark.created_at) %>
+
+    <i class="bookmark-timestamp"><%= y %> ago</i>
+
+
 
   <!--  TODO: Is this a safe way to hide data? -->
   <% if @user == @current_user %>
