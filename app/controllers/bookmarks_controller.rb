@@ -1,6 +1,6 @@
 class BookmarksController < ApplicationController
 
-  before_action :protect_bookmarks, :only => [:edit, :create, :update, :destroy]
+  before_action :protect_bookmarks, :only => [:edit, :update, :destroy]
   # the 4 actions that use params[:id]
 
   def index
@@ -69,7 +69,7 @@ class BookmarksController < ApplicationController
   end
 
   def protect_bookmarks
-    unless Bookmark.find(params[:id]).id == @current_user.id
+    unless Bookmark.find(params[:id]).user_id == @current_user.id
       flash[:error] = "Please don't do that to bookmarks"
       redirect_to root_path
     end
