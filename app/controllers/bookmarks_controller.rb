@@ -14,6 +14,9 @@ class BookmarksController < ApplicationController
 
   def new
     @bookmark = Bookmark.new
+    if @current_user.categories.nil?
+      @current_user.categories.create :name => "Uncategorised"
+    end
     @bookmark.categories << @current_user.categories.first
   end
 
