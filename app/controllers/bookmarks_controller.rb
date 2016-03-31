@@ -15,7 +15,8 @@ class BookmarksController < ApplicationController
   def new
     @bookmark = Bookmark.new
 
-    # Not sure why some users don't have @current_user
+    # Not sure why when users don't have categories, @current_user is nil for this action and it throws an error
+    # But this works, somehow
     if @current_user.categories.empty?
       @current_user.categories.create :name => "Uncategorised"
     end
