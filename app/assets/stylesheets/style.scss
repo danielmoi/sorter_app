@@ -444,7 +444,8 @@ fieldset {
   font-size: 1em;
   padding: 0.5em;
   border: none;
-  background: rgba(200, 200, 200, 0.3);
+  background: rgba(255,255,255,0.6);
+  border-bottom: 1px solid $primary-light;
 }
 .label {
   display: block;
