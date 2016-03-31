@@ -1,9 +1,12 @@
 class SessionController < ApplicationController
-  # display login page
+
+  # This handles log-in and log-out stuff
+  
+  # display LOG IN page
   def new
   end
 
-  # handle submit from login page
+  # handle submit from LOG IN page
   def create
     user = User.find_by :email => params[:email]
 
@@ -26,7 +29,7 @@ class SessionController < ApplicationController
     end
   end
 
-  # handle request to logout
+  # handle request to LOG OUT
   def destroy
     session[:user_id] = nil
     redirect_to root_path
