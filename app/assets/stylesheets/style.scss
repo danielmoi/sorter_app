@@ -82,6 +82,16 @@ img {
   height: auto;
   border: 0;
 }
+
+input, button, textarea {
+  -webkit-appearance: none; /*Safari/Chrome*/
+ -moz-appearance: none; /*Firefox*/
+ -ms-appearance: none; /*IE*/
+ -o-appearance: none; /*Opera*/
+ appearance: none;
+
+ -webkit-border-radius: 0;
+}
 // 3. TYPOGRAPHY
 * {
   font-family: Helvetica, sans-serif;
@@ -439,13 +449,7 @@ fieldset {
   display: inline;
 }
 .input {
-  -webkit-appearance: none; /*Safari/Chrome*/
- -moz-appearance: none; /*Firefox*/
- -ms-appearance: none; /*IE*/
- -o-appearance: none; /*Opera*/
- appearance: none;
 
- -webkit-border-radius: 0;
   display: block;
   width: 100%;
   font-size: 1em;
