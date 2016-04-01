@@ -20,7 +20,11 @@ class BookmarksController < ApplicationController
     if @current_user.categories.empty?
       @current_user.categories.create :name => "Uncategorised"
     end
-    @bookmark.categories << @current_user.categories.first
+
+    # This ends up multiplying bookmarks
+    # Needs a fix / delete it because we have a check in create action
+    # This really just serves to pre-check a checkbox
+    # @bookmark.categories << @current_user.categories.first
   end
 
   def create
