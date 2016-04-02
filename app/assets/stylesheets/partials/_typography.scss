@@ -1,0 +1,29 @@
+// 3. TYPOGRAPHY
+* {
+  font-family: Helvetica, sans-serif;
+  color: $text;
+}
+h1 {
+  font-size: 2em;
+  padding: 10px 0;
+  @media screen and (min-width: 600px) {
+    font-size: 4em;
+  }
+}
+
+h2 {
+  font-size: 1.6em;
+  padding: 5px 0;
+  @media screen and (min-width: 600px) {
+  font-size: 2em;
+  }
+}
+
+h3 {
+  font-size: 1.3em;
+  padding: 5px 0;
+}
+p {
+  font-size: 1em;
+  padding: 5px 0;
+}
